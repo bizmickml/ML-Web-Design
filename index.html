@@ -5,13 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Website design - I build fully custom websites that consistently convert your story into loyal customers!">
   <title>Websites That Produce Results</title>
-  <link rel="stylesheet" href="./main.css">
+  <link rel="stylesheet" href="styles/main-min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&family=Andika:ital,wght@0,400;0,700;1,400;1,700&family=Audiowide&family=Montserrat&family=Permanent+Marker&family=Special+Elite&display=swap" rel="stylesheet">
     <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17332276422">
-  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17332276422"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -19,21 +18,21 @@
   
     gtag('config', 'AW-17332276422');
   </script>
-    <!-- Event snippet for Contact conversion page
-  In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+    <!--  Event snippet for Contact conversion page --
+          In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
   <script>
-  function gtag_report_conversion(url) {
-    var callback = function () {
-      if (typeof(url) != 'undefined') {
-        window.location = url;
-      }
-    };
-    gtag('event', 'conversion', {
-        'send_to': 'AW-17332276422/6CuOCIuy0e4aEMaZ1shA',
-        'event_callback': callback
-    });
-    return false;
-  }
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+          'send_to': 'AW-17332276422/6CuOCIuy0e4aEMaZ1shA',
+          'event_callback': callback
+      });
+      return false;
+    }
   </script>
   <script type="text/javascript">
     (function(c,l,a,r,i,t,y){

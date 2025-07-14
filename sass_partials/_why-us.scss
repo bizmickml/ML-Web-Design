@@ -1,3 +1,5 @@
+@use "variables" as *;
+
 #why-us {
   width: 100%;
   background-image: url(../Images/light_background.png);
@@ -7,12 +9,12 @@
   flex-direction: column;
   align-items: center;
   gap: 3rem;
-  scroll-margin-top: var(--headHeight);
+  scroll-margin-top: $headHeight;
 }
 
 #why-us h2 {
   font-size: 2.5rem;
-  font-family: var(--sourGummy);
+  font-family: $sourGummy;
   text-align: center;
 }
 
@@ -22,11 +24,11 @@
   justify-content: center;
   gap: 1rem;
   flex-wrap: nowrap;
-  border: .1rem solid var(--pink);
+  border: .1rem solid $pink;
   border-radius: .25rem;
   padding: clamp(.8rem, 2.5vw, 1.5rem);
-  box-shadow: 0 0 .6rem var(--blue-dark-trans);
-  background: var(--white);
+  box-shadow: 0 0 .6rem $blue-dark-trans;
+  background: $white;
 
 }
 
@@ -53,7 +55,7 @@
 #why-us h3 {
   font-size: 1.8rem;
   margin-bottom: 1rem;
-  color: var(--pink);
-  font-family: var(--sourGummy);
+  color: $pink;
+  font-family: $sourGummy;
 }
 

@@ -1,23 +1,27 @@
+@use "variables" as *;
+
 header {
   position: fixed;
-  top: 0px;
+  top: 0;
+  left: 0;
+  right: 0;
   width: 100%;
-  height: var(--headHeight);
+  height: $headHeight;
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
   justify-content: space-between;
   padding: .5rem 1rem .5rem .6rem;
-  background: linear-gradient(var(--blue-light), var(--blue) 90%);
-  font-family: var(--subheading);
-  box-shadow: 0 0 .15rem var(--blue-dark);
+  background: linear-gradient($blue-light, $blue 90%);
+  font-family: $subheading;
+  box-shadow: 0 0 .15rem $blue-dark;
   z-index: 1;
 }
 
 header a, header li{
   text-decoration: none;
-  color: var(--yellow);
-  text-shadow: -.1rem .1rem .2rem var(--yellow-dark);
+  color: $yellow;
+  text-shadow: -.1rem .1rem .2rem $yellow-dark;
   font-weight: 600;
   transition: 200ms;
 }
@@ -47,15 +51,15 @@ header a, header li{
   width: auto;
   aspect-ratio: 5/2;
   border-radius: 100%;
-  border: 1px solid var(--yellow);
-  box-shadow: -.1rem .1rem .3rem var(--blue-dark);
+  border: 1px solid $yellow;
+  box-shadow: -.1rem .1rem .3rem $blue-dark;
 }
 
 #mobile-menu-icon:not(.hidden) {
   height: 80%;
   width: auto;
   border-radius: 2px;
-  box-shadow: 0 0 .3rem var(--blue-dark);
+  box-shadow: 0 0 .3rem $blue-dark;
   cursor: pointer;
 }
 
@@ -65,7 +69,7 @@ header a, header li{
   position:fixed;
   top: 0;
   right: 0;
-  background: var(--yellow-dark-trans);
+  background: $yellow-dark-trans;
 }
 
 #mobile-nav:not(.hidden) ul {
@@ -84,9 +88,9 @@ header a, header li{
 }
 
 #mobile-nav:not(.hidden) ul li:not(:first-of-type) {
-  border-bottom: 1px solid var(--white);
+  border-bottom: 1px solid $white;
 }
 
 #mobile-nav:not(.hidden) ul li:active {
-  background: var(--yellow-light);
+  background: $yellow-light;
 } 

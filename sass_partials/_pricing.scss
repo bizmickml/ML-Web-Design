@@ -1,3 +1,5 @@
+@use "variables" as *;
+
 #pricing {
   width: 100%;
   display: flex;
@@ -5,14 +7,14 @@
   align-items: start;
   justify-content: center;
   gap: 2rem;
-  scroll-margin-top: var(--headHeight);
+  scroll-margin-top: $headHeight;
 }
 
 #pricing .head-wrapper {
   width: 100%;
-  background: var(--blue-trans);
+  background: $blue-trans;
   border-radius: 1rem 1rem 0 0 ;
-  box-shadow: 0 0 .5rem var(--blue-dark);
+  box-shadow: 0 0 .5rem $blue-dark;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -21,10 +23,10 @@
 }
 
 #pricing .head-wrapper h2 {
-  font-family: var(--sourGummy);
+  font-family: $sourGummy;
   font-size: 2.9rem;
-  color: var(--white);
-  text-shadow: .1rem .1rem .3rem var(--blue-dark);
+  color: $white;
+  text-shadow: .1rem .1rem .3rem $blue-dark;
   align-self: start;
 }
 
@@ -50,7 +52,7 @@
 
 #pricing .badge-wrapper .text-wrapper h3 {
   font-weight: bold;
-  font-family: var(--subheading);
+  font-family: $subheading;
   text-align: right;
 }
 
@@ -65,7 +67,7 @@
   position: relative;
   overflow: hidden;
   border-radius: 1rem;
-  box-shadow: 0 0 .5rem var(--blue-dark);
+  box-shadow: 0 0 .5rem $blue-dark;
   padding: .8rem;
   display: flex;
   flex-direction: column;
@@ -82,13 +84,13 @@
 }
 
 #pricing .package-container:not(#add-on-services) {
-  background: var(--blue);
-  border: .3rem solid var(--yellow);
+  background: $blue;
+  border: .3rem solid $yellow;
 }
 
 #pricing .package-container#add-on-services {
   width: 100%;
-  background: var(--blue-light);
+  background: $blue-light;
 }
 
 #pricing .package-container:not(#monthly-package) .package-header-container {
@@ -106,10 +108,10 @@
 }
 
 #pricing .package-container .package-header-container h3 {
-  color: var(--pink);
-  font-family: var(--sourGummy);
+  color: $pink;
+  font-family: $sourGummy;
   font-size: 2.2rem;
-  text-shadow: -.1rem 0.1rem .1rem var(--blue-dark);
+  text-shadow: -.1rem 0.1rem .1rem $blue-dark;
   line-height: 1;
   margin-bottom: .25rem;
 }
@@ -119,7 +121,7 @@
 }
 
 #pricing .package-container .package-header-container h4 {
-  font-family: var(--paragraph);
+  font-family: $paragraph;
   font-weight: 600;
   font-size: 1rem;
   margin: 0 0 .75rem;
@@ -148,7 +150,7 @@
 }
 
 #pricing .package-container .package-description {
-  background: var(--blue-light);
+  background: $blue-light;
   padding: .8rem;
   border-radius: .5rem;
   font-size: 1rem;
@@ -202,7 +204,7 @@
 }
 
 #pricing ul.included-items-list li:not(:last-of-type) {
-  border-bottom: .1rem solid var(--blue-dark-trans);
+  border-bottom: .1rem solid $blue-dark-trans;
 }
 
 #pricing ul.included-items-list li.prev-package-list-item {
@@ -220,7 +222,7 @@
   right: -12.75rem;
   width: 20rem;
   height: 20rem;
-  background: var(--pink);
+  background: $pink;
   transform-origin: center center;
   transform: rotate(45deg);
   display: flex;
@@ -247,7 +249,7 @@
 }
 
 #pricing #intro-pricing-disclaimer {
-  background: var(--white);
+  background: $white;
   width: 100%;
   font-weight: bold;
   font-size: .8rem;

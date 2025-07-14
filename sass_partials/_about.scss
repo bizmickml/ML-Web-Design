@@ -1,14 +1,16 @@
+@use "variables" as *; 
+
 #about-us {
   background: url(../Images/newspaper.png);
   background-position: 50% 50%;
   background-size: cover;
   border-radius: 1rem;
   overflow: hidden;
-  box-shadow: 0 0 .8rem var(--blue-dark);
+  box-shadow: 0 0 .8rem $blue-dark;
   padding: 1rem;
   max-width: clamp(280px, 96cqw, 1900px);
   margin: 5vh auto;
-  scroll-margin-top: calc(var(--headHeight) + 5vh);
+  scroll-margin-top: calc(#{$headHeight} + 5vh);
 }
 
 #about-us .head-wrap {
@@ -31,22 +33,22 @@
   height: auto;
   object-fit: contain;
   border-radius: .25rem;
-  box-shadow: 0 0 .2rem var(--yellow-dark);
+  box-shadow: 0 0 .2rem $yellow-dark;
 }
 
 #about-us .head-wrap figcaption {
   text-align: right;
   font-size: .75rem;
   font-style: italic;
-  color: var(--black);
+  color: $black;
 }
 
 #about-us .head-wrap h2 {
   text-align: left;
-  color: var(--black);
+  color: $black;
   font-size: 2.2rem;
-  font-family: var(--subheading);
-  color: var(--black);
+  font-family: $subheading;
+  color: $black;
 }
 
 #about-us .my-story #hiking-story, 
@@ -63,7 +65,7 @@
 
 #about-us .my-story #hiking-story .first-paragraph::first-letter {
   font-size: clamp(33px, 2.5rem, 55px);
-  color: var(--pink);
+  color: $pink;
   font-weight: bold;
   float: left;
   padding-top: .25rem;
@@ -72,11 +74,11 @@
 
 #about-us .my-story aside {
   width: clamp(280px, 50%, 300px);
-  background: var(--pink);
-  color: var(--white);
+  background: $pink;
+  color: $white;
   padding: 1rem;
   border-radius: .75rem;
-  box-shadow: -.1rem -.1rem .3rem var(--pink-dark);
+  box-shadow: -.1rem -.1rem .3rem $pink-dark;
   margin: 1rem 0 1rem 1rem;
   float: right;
   font-size: .9rem;
@@ -86,7 +88,7 @@
 
 #about-us .my-story hr {
   margin: 1rem auto 0;
-  border-color: var(--pink);
+  border-color: $pink;
   width: 90%;
 }
 
@@ -97,7 +99,7 @@
 #about-us .my-story .block-quote {
   margin: 1rem 2rem;
   font-style: italic;
-  color: var(--pink-dark);
+  color: $pink-dark;
   text-align: justify;
 }
 
@@ -109,7 +111,7 @@
 #about-us .my-story .inline-quote {
   display: block;
   font-style: italic;
-  color: var(--pink-dark);
+  color: $pink-dark;
   opacity: .8;
   margin: .5rem;
   break-inside: avoid;
@@ -120,12 +122,12 @@
 }
 
 #about-us .my-story #learning-webstuff .attention-grabber {
-  background: var(--pink);
-  border: 1px solid var(--pink-dark);
-  box-shadow: 0 0 .2rem var(--pink-dark);
+  background: $pink;
+  border: 1px solid $pink-dark;
+  box-shadow: 0 0 .2rem $pink-dark;
   padding: .8rem;
   border-radius: .5rem;
-  color: var(--white);
+  color: $white;
 }
 
 #about-us .my-story #learning-webstuff .guarantee {

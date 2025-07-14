@@ -6,8 +6,8 @@ import padControl from "./modules/responsivePadding.js";
 
 /** ---- For Module Parameters ---- */
 const minFontSize = 10;
-  // multiplier calulates max font at the max screen width
 const fontSizeMultiplier = 2.6;
+const maxFontSize = minFontSize * fontSizeMultiplier;
 const maxScreenWidth = 2560;
 const minScreenWidth = 320;
 
@@ -76,7 +76,7 @@ function pageLayout() {
 }
 
 window.onload = () => {
-  document.querySelector(":root").setAttribute("style", `font-size: ${preferredFontSize(minFontSize, fontSizeMultiplier, minScreenWidth, maxScreenWidth)};`)
+  document.querySelector(":root").setAttribute("style", `font-size: ${preferredFontSize(minFontSize, maxFontSize, minScreenWidth, maxScreenWidth)};`)
   navControl(nav, mobileNav, mobileNavIcon);
   padControl(whyUsSection, whyUsMinPadding, whyUsMaxPadding);
   padControl(pricingContainer, pricingMinPadding, pricingMaxPadding);

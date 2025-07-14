@@ -1,13 +1,10 @@
-export default function(minFontSize, fontSizeMultiplier, minScreenWidth, maxScreenWidth) {
+export default function(minFontSize, maxFontSize, minScreenWidth, maxScreenWidth) {
   /**
    * Takes parameters as numbers representing the px values of each item
    * minFontSize = the smallest allowed font size on the smallest screen
-   * fontSizeMultiplier = a number to multiply the minFontSize by to calculate the maximum allowed font size on any screen
+   * maxFontSize = the largest allowed font size on the largest screen
    * minScreenWidth and maxScreenWidth = the screen widths at which the font size will stop growing or shrinking even if the screen width is larger/smaller
    */
-
-  //calc max font size
-  const maxFontSize = minFontSize * fontSizeMultiplier
 
   //get window font size
   const calculatedFontSize = window.getComputedStyle(document.documentElement).fontSize;
