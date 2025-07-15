@@ -1,7 +1,7 @@
 @use "variables" as *;
 
 #contact {
-  height: calc(100vh - #{$headHeight});
+  height: calc(100vh - $headHeight);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -14,7 +14,7 @@
 #contact h2 {
   font-family: $headline;
   color: $white;
-  font-size: 4.5rem;
+  font-size: 4rem;
   text-shadow: .1rem .1rem .4rem $blue-dark;
   line-height: 1;
 }
@@ -22,7 +22,7 @@
 #contact p {
   color: $yellow;
   font-family: $subheading;
-  font-size: 2.25rem;
+  font-size: 2rem;
   font-weight: 600;
   text-shadow: .05rem .05rem .1rem $yellow-dark;
   margin-top: 1.6rem;
@@ -101,7 +101,7 @@
 }
 
 #contact .hero-img {
-  width: 10rem;
+  width: 8rem;
   height: auto;
   border-radius: 100%;
   box-shadow: 0 0 .3rem $blue-dark;

@@ -44,17 +44,19 @@
 </head>
 <body>
   <header>
-    <img id="logo" src="./Images/webDev.ML_Logo.png" alt="WebDev.ML logo" class="animate rotate-Y delay-3 count-infinite length-6000">
-    <a href="tel:5085587844" id="phone-link" onclick="gtag_report_conversion()">(508) 558-7844</a>
-    <nav id="nav">
-      <ul>
-        <li><a href="#why-us">Why us?</a></li>
-        <li><a href="#about-us">About</a></li>
-        <li><a href="#pricing">Pricing</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-    <img src="./Images/dehaze_60dp_FECC04_FILL1_wght700_GRAD0_opsz48.png" alt="Menu button" id="mobile-menu-icon">
+    <div class="flex-container">
+      <img id="logo" src="./Images/webDev.ML_Logo.png" alt="WebDev.ML logo" class="animate rotate-Y delay-3 count-infinite length-6000">
+      <a href="tel:5085587844" id="phone-link" onclick="gtag_report_conversion()" class="hover grow hov-length-200">(508) 558-7844</a>
+      <nav id="nav">
+        <ul>
+          <li class="hover grow hov-length-200"><a href="#why-us">Why us?</a></li>
+          <li class="hover grow hov-length-200"><a href="#about-us">About</a></li>
+          <li class="hover grow hov-length-200"><a href="#pricing">Pricing</a></li>
+          <li class="hover grow hov-length-200"><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <img src="./Images/dehaze_60dp_FECC04_FILL1_wght700_GRAD0_opsz48.png" alt="Menu button" id="mobile-menu-icon">
+    </div>
     <nav id="mobile-nav" class="hidden">
       <ul>
         <li>X</li>
@@ -68,35 +70,7 @@
   <section id="welcome">
       <h1 class="animate fly-in-right length-1000 delay-1">Professional Web Design Services</h1>
       <p class="subheading animate fade-in length-1000 delay-2">Designs that turn your story into loyal clients</p>
-      <!-- <a href="#quick-start"><button type="button">Get Started</button></a> -->
   </section>
-  <!-- <section id="new-client-cta">
-    Add a content box with scrolling logos and statements of what we do (HTML, CSS web design, etc.)
-    Also include a discount offer in exchange for email for new clients
-  </section> -->
-  <!-- <section id="quick-start">
-    <div class="text-wrapper">
-      <h2>Quick Start:</h2>
-      <h3>How can we help?</h3>
-    </div>
-    <div class="btn-wrapper">
-      <div>
-        <button class="question-btn">
-          <span>Just Getting Started</span>
-          <img src="./Images/keyboard_arrow_down_24dp_12130F_FILL0_wght600_GRAD0_opsz24.png">
-        </button>
-        <div class="answer-wrapper">
-          <p class="answer"></p>
-        </div>
-      </div>
-      <div><button class="question-btn">Outdated website needs updating</button></div>
-      <div><button class="question-btn">Website not converting visitors into customers</button></div>
-      <div><button class="question-btn">Website looks terrible on different devices</button></div>
-      <div><button class="question-btn">Website isn't ranking on search engines</button></div>
-      <div><button class="question-btn">Accessibility problems</button></div>
-      <div><button class="question-btn">Just need pricing</button></div>
-    </div>
-  </section> -->
   <section id="why-us">
     <h2>What Makes Us Different?</h2>
     <div id="key-point-1" class="wrapper fly-in-right length-1000">
@@ -163,152 +137,154 @@
     </article>
   </section>
   <section id="pricing">
-    <div class="head-wrapper">
-      <h2>Pricing Options</h2>
-      <div class="badge-wrapper">
-        <div class="text-wrapper">
-          <h3>2:1 Guarantee</h3>
-          <p>My services will bring you back at least $2 in value for every $1 spent or your money back.</p>
+    <div class="flex-wrapper">
+      <div class="head-wrapper">
+        <h2>Pricing Options</h2>
+        <div class="badge-wrapper">
+          <div class="text-wrapper">
+            <h3>2:1 Guarantee</h3>
+            <p>My services will bring you back at least $2 in value for every $1 spent or your money back.</p>
+          </div>
+          <img src="./Images/2_1_guarantee.png" alt="Two to one guarantee - my services will bring you back at least $2 for every $1 spent or your money back.">
         </div>
-        <img src="./Images/2_1_guarantee.png" alt="Two to one guarantee - my services will bring you back at least $2 for every $1 spent or your money back.">
       </div>
-    </div>
-    <div id="package-1" class="package-container hover spin-Y length-500">
-      <div class="package-header-container">
-        <h3>Starting Strong</h3>
-        <h4>Option #1</h4>
-        <p class="reg-price-txt">Regular price <span class="reg-price-amount">$1,499.97</span></p>
-        <p class="offer-price-txt">Starting at only <span class="offer-price-amount">$499.97</span>*</p>
+      <div id="package-1" class="package-container hover spin-Y length-500">
+        <div class="package-header-container">
+          <h3>Starting Strong</h3>
+          <h4>Option #1</h4>
+          <p class="reg-price-txt">Regular price <span class="reg-price-amount">$1,499.97</span></p>
+          <p class="offer-price-txt">Starting at only <span class="offer-price-amount">$499.97</span>*</p>
 
+        </div>
+        <div class="package-description">
+          <p>This web design package gets you a lightning-fast, fully-custom, one-page website that showcases your content.</p>
+          <p>Your site is guaranteed to be fully accessible, device-responsive, mobile-friendly, and optimized for SEO.</p>
+          <p><strong>Get more leads. Showcase your content. Convert more leads into customers!</strong></p>
+        </div>
+        <div class="item-list-container">
+          <h5 class="item-list-header">What's Included:</h5>
+          <ul class="included-items-list">
+            <li>Page Header with navigation</li>
+            <li>Welcome section with call-to-action & offer</li>
+            <li>Selling points section</li>
+            <li>About section</li>
+            <li>Service section</li>
+            <li>Testimonies</li>
+            <li>Portfolio section</li>
+            <li>Contact section with contact form for lead generation</li>
+          </ul>
+        </div>
       </div>
-      <div class="package-description">
-        <p>This web design package gets you a lightning-fast, fully-custom, one-page website that showcases your content.</p>
-        <p>Your site is guaranteed to be fully accessible, device-responsive, mobile-friendly, and optimized for SEO.</p>
-        <p><strong>Get more leads. Showcase your content. Convert more leads into customers!</strong></p>
+      <div id="package-2" class="package-container hover spin-Y length-500">
+        <div class="package-header-container">
+          <h3>E-commerce Integration</h3>
+          <h4>Option #2</h4>
+          <p class="reg-price-txt">Regular price <span class="reg-price-amount">$2,999.97</span></p>
+          <p class="offer-price-txt">Starting at only <span class="offer-price-amount">$1,499.97</span>*</p>
+        </div>
+        <div class="package-description">
+          <p>This package includes everything that is in the "Starting Strong" package</p>
+          <p class="center-text"> - PLUS - </p>
+          <p>We'll integrate your online shopping cart to your new custom website. So, you'll not only get more leads, showcase your content, and convert more leads into customers, but you'll also have a <strong>state-of-the-art e-commerce platform to sell your product even  while you sleep!</strong></p>
+        </div>
+        <div class="item-list-container">
+          <h5 class="item-list-header">What's Included:</h5>
+          <ul class="included-items-list">
+            <li class="prev-package-list-item">Page Header with navigation</li>
+            <li class="prev-package-list-item">Welcome section with call-to-action & offer</li>
+            <li class="prev-package-list-item">Selling points section</li>
+            <li class="prev-package-list-item">About section</li>
+            <li class="prev-package-list-item">Service section</li>
+            <li class="prev-package-list-item">Testimonies</li>
+            <li class="prev-package-list-item">Portfolio section</li>
+            <li class="prev-package-list-item">Contact section with contact form for lead generation</li>
+            <p class="center-text width-100">- PLUS -</p>
+            <li>E-store integration</li>
+            <li>Cart integration</li>
+            <li>Payment Processing integration</li>
+          </ul>
+        </div>
       </div>
-      <div class="item-list-container">
-        <h5 class="item-list-header">What's Included:</h5>
-        <ul class="included-items-list">
-          <li>Page Header with navigation</li>
-          <li>Welcome section with call-to-action & offer</li>
-          <li>Selling points section</li>
-          <li>About section</li>
-          <li>Service section</li>
-          <li>Testimonies</li>
-          <li>Portfolio section</li>
-          <li>Contact section with contact form for lead generation</li>
-        </ul>
+      <div id="monthly-package" class="package-container hover spin-Y length-500">
+        <div class="special">
+          <ul>
+            <li>FREE Website</li>
+            <li>FREE Domain</li>
+            <li>FREE Web Hosting</li>
+          </ul>
+        </div>
+        <div class="package-header-container">
+          <h3>Prosperity Package</h3>
+          <h4>Monthly service option</h4>
+          <p class="reg-price-txt">Regular price <span class="reg-price-amount">$299.97/mo.</span></p>
+          <p class="offer-price-txt">Starting at only <span class="offer-price-amount">$149.97/mo.</span>*</p>
+        </div>
+        <div class="package-description">
+          <p><strong>Lowest startup cost</strong> - this service option brings you everything you need for an extremely profitable online presence, <em>all included</em> at one, low monthly cost.</p>
+        </div>
+        <div class="item-list-container">
+          <h5 class="item-list-header">What's Included:</h5>
+          <ul class="included-items-list">
+            <li class="prev-package-list-item">Everything in the "Starting Strong" package</li>
+            <li class="prev-package-list-item">Everything in the "E-Commerce Integration" package</li>
+            <p class="center-text width-100">- PLUS -</p>
+            <li>Anytime Website Updates</li>
+            <li>Web Hosting</li>
+            <li>Domain Name</li>
+            <li>Logo Design & Theme Help</li>
+            <li>Graphic Design</li>
+            <li>Market Research</li>
+            <li>Copywriting</li>
+            <li>Keyword Research</li>
+            <li>Search Engine Optimization</li>
+          </ul>
+        </div>
+        <p id="hourly-disclaimer" class="disclaimer"><em>*Includes up to two hours of hourly services per month. Automatically renews at regular price after one full year.</em></p>
       </div>
+      <div id="add-on-services" class="package-container">
+        <div class="package-header-container">
+          <h3>Add-on Services</h3>
+          <h4>Anything we can do to help you better serve your people</h4>
+          <p class="reg-price-txt">Regular price <span class="reg-price-amount">$149.97/hr</span></p>
+          <p class="offer-price-txt">Hourly services Starting at only <span class="offer-price-amount">$75/hr</span>*</p>
+        </div>
+        <p class="package-description">We have a wide range of hourly services available to help you get more attention from your people.</p>
+        <div class="item-list-container">
+          <h5 class="item-list-header">Choose any of these services:</h5>
+          <ul class="included-items-list">
+            <li>Logo Design & Theme Help <span>hourly</span></li>
+            <li>Graphic Design <span>hourly</span></li>
+            <li>Market Research <span>hourly</span></li>
+            <li>Copywriting <span>hourly</span></li>
+            <li>Keyword Research <span>hourly</span></li>
+            <li>Search Engine Optimization <span>hourly</span></li>
+            <li>Anytime Website Updates <span>hourly</span></li>
+            <li>Ad Management <span>monthly options available</span></li>
+            <li>Custom Email <span>$3.97/mo.</span></li>
+            <li>Custom Domain <span>$21.99/yr.</span></li>
+            <li>Web Hosting <span>starting at $2.99/yr.</span></li>
+          </ul>
+        </div>
+      </div>
+      <div id="package-3" class="package-container">
+        <div class="package-header-container">
+          <h3>Web App Development</h3>
+          <p class="reg-price-txt">Regular price <span class="reg-price-amount">$15,999.97</span></p>
+          <p class="offer-price-txt">Starting at only <span class="offer-price-amount">$9,999.97</span>*</p>
+        </div>
+        <p class="package-description">Choose this option if you have an app idea and need a web developer to help you create it.</p>
+        <div class="item-list-container">
+          <h5 class="item-list-header">What's Included:</h5>
+          <ul class="included-items-list">
+            <li>Custom - design/build process</li>
+            <li>Fully tailored experience</li>
+            <li>Turn-Key process from design to deployment</li>
+            <li>Add-on to any monthly enrollment</li>
+          </ul>
+        </div>
+      </div>
+      <p id="intro-pricing-disclaimer" class="disclaimer">*Discount offered to new customers only for the first year of service. Regular pricing automatically applied after the one-year anniversary.</p>
     </div>
-    <div id="package-2" class="package-container hover spin-Y length-500">
-      <div class="package-header-container">
-        <h3>E-commerce Integration</h3>
-        <h4>Option #2</h4>
-        <p class="reg-price-txt">Regular price <span class="reg-price-amount">$2,999.97</span></p>
-        <p class="offer-price-txt">Starting at only <span class="offer-price-amount">$1,499.97</span>*</p>
-      </div>
-      <div class="package-description">
-        <p>This package includes everything that is in the "Starting Strong" package</p>
-        <p class="center-text"> - PLUS - </p>
-        <p>We'll integrate your online shopping cart to your new custom website. So, you'll not only get more leads, showcase your content, and convert more leads into customers, but you'll also have a <strong>state-of-the-art e-commerce platform to sell your product even  while you sleep!</strong></p>
-      </div>
-      <div class="item-list-container">
-        <h5 class="item-list-header">What's Included:</h5>
-        <ul class="included-items-list">
-          <li class="prev-package-list-item">Page Header with navigation</li>
-          <li class="prev-package-list-item">Welcome section with call-to-action & offer</li>
-          <li class="prev-package-list-item">Selling points section</li>
-          <li class="prev-package-list-item">About section</li>
-          <li class="prev-package-list-item">Service section</li>
-          <li class="prev-package-list-item">Testimonies</li>
-          <li class="prev-package-list-item">Portfolio section</li>
-          <li class="prev-package-list-item">Contact section with contact form for lead generation</li>
-          <p class="center-text width-100">- PLUS -</p>
-          <li>E-store integration</li>
-          <li>Cart integration</li>
-          <li>Payment Processing integration</li>
-        </ul>
-      </div>
-    </div>
-    <div id="monthly-package" class="package-container hover spin-Y length-500">
-      <div class="special">
-        <ul>
-          <li>FREE Website</li>
-          <li>FREE Domain</li>
-          <li>FREE Web Hosting</li>
-        </ul>
-      </div>
-      <div class="package-header-container">
-        <h3>Prosperity Package</h3>
-        <h4>Monthly service option</h4>
-        <p class="reg-price-txt">Regular price <span class="reg-price-amount">$299.97/mo.</span></p>
-        <p class="offer-price-txt">Starting at only <span class="offer-price-amount">$149.97/mo.</span>*</p>
-      </div>
-      <div class="package-description">
-        <p><strong>Lowest startup cost</strong> - this service option brings you everything you need for an extremely profitable online presence, <em>all included</em> at one, low monthly cost.</p>
-      </div>
-      <div class="item-list-container">
-        <h5 class="item-list-header">What's Included:</h5>
-        <ul class="included-items-list">
-          <li class="prev-package-list-item">Everything in the "Starting Strong" package</li>
-          <li class="prev-package-list-item">Everything in the "E-Commerce Integration" package</li>
-          <p class="center-text width-100">- PLUS -</p>
-          <li>Anytime Website Updates</li>
-          <li>Web Hosting</li>
-          <li>Domain Name</li>
-          <li>Logo Design & Theme Help</li>
-          <li>Graphic Design</li>
-          <li>Market Research</li>
-          <li>Copywriting</li>
-          <li>Keyword Research</li>
-          <li>Search Engine Optimization</li>
-        </ul>
-      </div>
-      <p id="hourly-disclaimer" class="disclaimer"><em>*Includes up to two hours of hourly services per month. Automatically renews at regular price after one full year.</em></p>
-    </div>
-    <div id="add-on-services" class="package-container">
-      <div class="package-header-container">
-        <h3>Add-on Services</h3>
-        <h4>Anything we can do to help you better serve your people</h4>
-        <p class="reg-price-txt">Regular price <span class="reg-price-amount">$149.97/hr</span></p>
-        <p class="offer-price-txt">Hourly services Starting at only <span class="offer-price-amount">$75/hr</span>*</p>
-      </div>
-      <p class="package-description">We have a wide range of hourly services available to help you get more attention from your people.</p>
-      <div class="item-list-container">
-        <h5 class="item-list-header">Choose any of these services:</h5>
-        <ul class="included-items-list">
-          <li>Logo Design & Theme Help <span>hourly</span></li>
-          <li>Graphic Design <span>hourly</span></li>
-          <li>Market Research <span>hourly</span></li>
-          <li>Copywriting <span>hourly</span></li>
-          <li>Keyword Research <span>hourly</span></li>
-          <li>Search Engine Optimization <span>hourly</span></li>
-          <li>Anytime Website Updates <span>hourly</span></li>
-          <li>Ad Management <span>monthly options available</span></li>
-          <li>Custom Email <span>$3.97/mo.</span></li>
-          <li>Custom Domain <span>$21.99/yr.</span></li>
-          <li>Web Hosting <span>starting at $2.99/yr.</span></li>
-        </ul>
-      </div>
-    </div>
-    <div id="package-3" class="package-container">
-      <div class="package-header-container">
-        <h3>Web App Development</h3>
-        <p class="reg-price-txt">Regular price <span class="reg-price-amount">$15,999.97</span></p>
-        <p class="offer-price-txt">Starting at only <span class="offer-price-amount">$9,999.97</span>*</p>
-      </div>
-      <p class="package-description">Choose this option if you have an app idea and need a web developer to help you create it.</p>
-      <div class="item-list-container">
-        <h5 class="item-list-header">What's Included:</h5>
-        <ul class="included-items-list">
-          <li>Custom - design/build process</li>
-          <li>Fully tailored experience</li>
-          <li>Turn-Key process from design to deployment</li>
-          <li>Add-on to any monthly enrollment</li>
-        </ul>
-      </div>
-    </div>
-    <p id="intro-pricing-disclaimer" class="disclaimer">*Discount offered to new customers only for the first year of service. Regular pricing automatically applied after the one-year anniversary.</p>
   </section>
   <section id="contact">
     <div class="text-wrapper">
@@ -326,6 +302,6 @@
   <footer>
     <p>&copy 2025 Michael Lamondy | All rights reserved</p>
   </footer>
-  <script src="./main.js" type="module"></script>
+  <script src="./modules/main.js" type="module"></script>
 </body>
 </html>

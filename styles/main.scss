@@ -8,6 +8,8 @@
 @use '../sass_partials/footer';
 @use '../sass_partials/quick-start';
 @use '../sass_partials/animations';
+@use "../sass_partials/hover-effects";
+@use "../sass_partials/classes";
 
 *, ::before, ::after {
   margin: 0;
@@ -19,11 +21,12 @@ html {
   width: 100vw;
   scroll-behavior: smooth;
   font-family: $paragraph;
+  overflow-x: hidden;
 }
 
 body { 
   width: 100%;
-  background-image: url(Images/background_img.png);
+  background-image: url(../Images/background_img.png);
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -46,16 +49,4 @@ button:hover {
   transform: scale(1.05);
   box-shadow: 0 0 .4rem $yellow;
   background: radial-gradient(120% 80% at 50% 40%, $yellow 45%, $yellow-dark);
-}
-
-.hidden {
-  display: none;
-}
-
-.center-text {
-  text-align: center;
-}
-
-.width-100 {
-  width: 100%;
 }
