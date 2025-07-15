@@ -1,0 +1,30 @@
+@use "variables" as *;
+
+#welcome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: calc(100vh - #{$headHeight});
+  margin-top: $headHeight;
+  background: $blue-trans;
+  box-shadow: 0 .02rem .08rem $blue-dark;
+  text-align: center;
+  padding: .02rem 1rem;
+}
+
+h1 {
+  font-family: $headline;
+  color: $white;
+  font-size: 4.5rem;
+  text-shadow: .1rem .1rem .4rem $blue-dark;
+  line-height: 1;
+}
+
+#welcome .subheading {
+  color: $yellow;
+  font-family: $subheading;
+  font-size: 2.25rem;
+  font-weight: 600;
+  text-shadow: .05rem .05rem .1rem $yellow-dark;
+}

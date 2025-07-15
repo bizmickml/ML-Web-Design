@@ -1,28 +1,23 @@
-export default function(nav, mobileNav, mobileNavIcon) {
-
-  //get screen calcs
-  const screenWidth = window.innerWidth;
-  const screenHeight = window.innerHeight;
-  const screenRes = screenWidth / screenHeight;
-
-  //nav vs. mobile-nav-btn visibility
-  if (screenRes >= 1) {
+export default function(navEl, mobileNavEl, mobileNavIcon, mobile) {
+  
+  // #nav vs. #mobile-nav-btn visibility
+  if (!mobile) {
     !mobileNavIcon.classList.contains("hidden") && mobileNavIcon.classList.add("hidden");
-    nav.classList.contains("hidden") && nav.classList.remove("hidden");
+    navEl.classList.contains("hidden") && navEl.classList.remove("hidden");
 
-  } else if (screenRes < 1) {
+  } else if (mobile) {
     mobileNavIcon.classList.contains("hidden") && mobileNavIcon.classList.remove("hidden");
-    !nav.classList.contains("hidden") && nav.classList.add("hidden");
+    !navEl.classList.contains("hidden") && navEl.classList.add("hidden");
 
     mobileNavIcon.addEventListener("click", () => {
       
-      mobileNav.classList.remove("hidden");
-      mobileNavIcon.style.cssText = "opacity: 0";
+      mobileNavEl.classList.remove("hidden");
+      mobileNavIcon.classList.add("invisible");
 
-      [...mobileNav.children[0].children].forEach((el) => {
+      [...mobileNavEl.children[0].children].forEach((el) => {
         el.addEventListener("click", () => {
-          mobileNav.classList.add("hidden");
-          mobileNavIcon.style.cssText = "opacity: 1";
+          mobileNavEl.classList.add("hidden");
+          mobileNavIcon.classList.remove("invisible");
         })
       })
     })

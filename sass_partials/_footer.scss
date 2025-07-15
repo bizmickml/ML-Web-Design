@@ -1,8 +1,10 @@
+@use "variables" as *;
+
 footer {
-  background: var(--blue-dark);
+  background: $blue-dark;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: .55rem 2rem;
-  color: var(--white);
+  color: $white;
 }

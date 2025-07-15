@@ -1,9 +1,11 @@
+@use "variables" as *;
+
 #quick-start {
   max-width: clamp(280px, 96cqw, 1280px);
   margin: 5vh auto;
-  height: calc(calc(100vh - 10vh) - var(--headHeight));
-  scroll-margin-top: calc(var(--headHeight) + 5vh);
-  background: linear-gradient(37deg, var(--white), var(--yellow-light) 50%);
+  height: calc(calc(100vh - 10vh) - $headHeight);
+  scroll-margin-top: calc($headHeight + 5vh);
+  background: linear-gradient(37deg, $white, $yellow-light 50%);
   border-radius: 1rem;
   padding: 3rem;
   display: flex;

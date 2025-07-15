@@ -1,0 +1,98 @@
+@use "variables" as *;
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: $headHeight;
+  background: linear-gradient($blue-light, $blue 90%);
+  font-family: $subheading;
+  box-shadow: 0 0 .15rem $blue-dark;
+  z-index: 1;
+  color: $yellow;
+
+  a {
+    text-decoration: none;
+    text-shadow: -.1rem .1rem .2rem $yellow-dark;
+    font-weight: 600;
+    color: $yellow;
+  }
+
+  .flex-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: .5rem 1rem .5rem .6rem;
+
+    img#logo  {
+      height: 100%;
+      width: auto;
+      aspect-ratio: 5/2;
+      border-radius: 100%;
+      border: 1px solid $yellow;
+      box-shadow: -.1rem .1rem .3rem $blue-dark;
+    }
+
+    #phone-link {
+      font-size: 1.6rem;
+    }
+
+    #nav {
+      ul {
+        list-style: none;
+        display: flex;
+        gap: 1.5rem;
+        flex-wrap: nowrap;
+        font-size: 1.2rem;
+      }
+    }
+
+    #mobile-menu-icon:not(.hidden) {
+      height: 80%;
+      width: auto;
+      border-radius: 2px;
+      box-shadow: 0 0 .3rem $blue-dark;
+      cursor: pointer;
+    }
+
+  }
+
+  #mobile-nav:not(.hidden) {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    background: $yellow-dark-trans;
+
+    ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: flex-end;
+      font-size: 1.4rem;
+
+      li {
+        text-align: flex-end;
+        padding: .5rem 1rem .5rem 1rem;
+        cursor: pointer;
+
+        &:not(:first-of-type) {
+          border-bottom: 1px solid $white;
+        }
+
+        &:active {
+          background: $yellow-light;
+        }
+      }
+    }
+  }
+}
