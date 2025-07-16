@@ -1,13 +1,12 @@
 import preferredFontSize from "./responsiveFontSize.js";
 import navControl from "./responsiveNav.js";
 
-
 /** ---- For Module Parameters ---- */
 const minFontSize = 10;
 const maxFontSize = 25;
 const maxScreenWidth = 1800;
 const minScreenWidth = 320;
-const screenWidthThreshold = 1000;
+const mobileScreenWidthThreshold = 1000;
 
 /** ---- Page Elements ---- */
 const navEl = document.getElementById("nav");
@@ -20,7 +19,7 @@ const aboutHeadTitle = document.getElementById("about-title");
 const keyPoints = [document.getElementById("key-point-1"), document.getElementById("key-point-2"), document.getElementById("key-point-3")];
 
 function isMobile() {
-  if (window.innerWidth < screenWidthThreshold) {
+  if (window.innerWidth < mobileScreenWidthThreshold) {
     return true 
   } else {
     return false
@@ -104,3 +103,5 @@ window.addEventListener("resize", () => {
 window.addEventListener("scroll", () => {
   animateKeyPoints();
 })
+
+// Copyright (c) 2025 by Michael Lamondy

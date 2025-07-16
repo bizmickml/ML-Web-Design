@@ -23,3 +23,5 @@ export default function(navEl, mobileNavEl, mobileNavIcon, mobile) {
     })
   } 
 }
+
+// Copyright (c) 2025 by Michael Lamondy

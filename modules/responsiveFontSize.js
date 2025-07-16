@@ -26,3 +26,5 @@ export default function(minFontSize, maxFontSize, minScreenWidth, maxScreenWidth
   return `clamp(${minFontRem}rem, ${yIntersect}rem + ${slope * 100}vw, ${maxFontRem}rem)`;
   
 }
+
+// Copyright (c) 2025 by Michael Lamondy
