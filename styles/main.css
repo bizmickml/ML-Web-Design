@@ -294,6 +294,7 @@ h1 {
   aspect-ratio: 1/1;
   border-radius: 5px;
   width: clamp(100px, 23.4375cqw, 400px);
+  height: auto;
 }
 #why-us .wrapper .text-wrap {
   display: flex;
