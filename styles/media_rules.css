@@ -1,0 +1,235 @@
+/* Mobile Portrait */
+@media only screen and (orientation: portrait) and (max-aspect-ratio: .6) and (max-width: 360px) {
+  body {
+    background-image: image-set("../Images/backgrounds/web-lang/web_lang-bkgrnd-mobile-portrait-360x800.webp",
+        "../Images/backgrounds/web-lang/web_lang-bkgrnd-mobile-portrait-540x1200-1.5x.webp" 1.5x,
+        "../Images/backgrounds/web-lang/web_lang-bkgrnd-mobile-portrait-720x1600-2x.webp" 2.0x,
+        "../Images/backgrounds/web-lang/web_lang-bkgrnd-mobile-portrait-1080x2400-3x.webp" 3.0x,
+        "../Images/backgrounds/web-lang/web_lang-bkgrnd-mobile-portrait-1440x3200-4x.webp" 4.0x);
+    background-image: -webkit-image-set("../Images/backgrounds/web-lang/web_lang-bkgrnd-mobile-portrait-360x800.webp",
+        "../Images/backgrounds/web-lang/web_lang-bkgrnd-mobile-portrait-540x1200-1.5x.webp" 1.5x,
+        "../Images/backgrounds/web-lang/web_lang-bkgrnd-mobile-portrait-720x1600-2x.webp" 2.0x,
+        "../Images/backgrounds/web-lang/web_lang-bkgrnd-mobile-portrait-1080x2400-3x.webp" 3.0x,
+        "../Images/backgrounds/web-lang/web_lang-bkgrnd-mobile-portrait-1440x3200-4x.webp" 4.0x);
+  }
+}
+
+@media only screen and (orientation: portrait) and (max-aspect-ratio: .6) and (min-width: 361px) and (max-width: 540px) {
+  body {
+    background-image: image-set("../Images/backgrounds/web-lang/web_lang-bkgrnd-mobile-portrait-540x1200-1.5x.webp",
+        "../Images/backgrounds/web-lang/web_lang-bkgrnd-mobile-portrait-720x1600-2x.webp" 1.5x,
+        "../Images/backgrounds/web-lang/web_lang-bkgrnd-mobile-portrait-1080x2400-3x.webp" 2.0x,
+        "../Images/backgrounds/web-lang/web_lang-bkgrnd-mobile-portrait-1440x3200-4x.webp" 3.0x);
+    background-image: -webkit-image-set("../Images/backgrounds/web-lang/web_lang-bkgrnd-mobile-portrait-540x1200-1.5x.webp",
+        "../Images/backgrounds/web-lang/web_lang-bkgrnd-mobile-portrait-720x1600-2x.webp" 1.5x,
+        "../Images/backgrounds/web-lang/web_lang-bkgrnd-mobile-portrait-1080x2400-3x.webp" 2.0x,
+        "../Images/backgrounds/web-lang/web_lang-bkgrnd-mobile-portrait-1440x3200-4x.webp" 3.0x);
+  }
+}
+
+@media only screen and (orientation: portrait) and (max-aspect-ratio: .6) and (min-width: 541px) and (max-width: 720px) {
+  body {
+    background-image: image-set("../Images/backgrounds/web-lang/web_lang-bkgrnd-mobile-portrait-720x1600-2x.webp",
+        "../Images/backgrounds/web-lang/web_lang-bkgrnd-mobile-portrait-1080x2400-3x.webp" 1.5x,
+        "../Images/backgrounds/web-lang/web_lang-bkgrnd-mobile-portrait-1440x3200-4x.webp" 2.0x);
+    background-image: -webkit-image-set("../Images/backgrounds/web-lang/web_lang-bkgrnd-mobile-portrait-720x1600-2x.webp",
+        "../Images/backgrounds/web-lang/web_lang-bkgrnd-mobile-portrait-1080x2400-3x.webp" 1.5x,
+        "../Images/backgrounds/web-lang/web_lang-bkgrnd-mobile-portrait-1440x3200-4x.webp" 2.0x);
+  }
+}
+
+@media only screen and (orientation: portrait) and (max-aspect-ratio: .6) and (min-width: 721px) and (max-width: 1080px) {
+  body {
+    background-image: image-set("../Images/backgrounds/web-lang/web_lang-bkgrnd-mobile-portrait-1080x2400-3x.webp",
+        "../Images/backgrounds/web-lang/web_lang-bkgrnd-mobile-portrait-1440x3200-4x.webp" 1.5x);
+    background-image: -webkit-image-set("../Images/backgrounds/web-lang/web_lang-bkgrnd-mobile-portrait-1080x2400-3x.webp",
+        "../Images/backgrounds/web-lang/web_lang-bkgrnd-mobile-portrait-1440x3200-4x.webp" 1.5x);
+  }
+}
+
+@media only screen and (orientation: portrait) and (max-aspect-ratio: .6) and (min-width: 1081px) {
+  body {
+    background-image: url("../Images/backgrounds/web-lang/web_lang-bkgrnd-mobile-portrait-1440x3200-4x.webp");
+  }
+}
+
+/* Tablet Portrait */
+@media only screen and (orientation: portrait) and (min-aspect-ratio: .61) and (max-width: 800px) {
+  body {
+    background-image: image-set("../Images/backgrounds/web-lang/web_lang-bkgrnd-tablet-portrait-800x1280.webp",
+        "../Images/backgrounds/web-lang/web_lang-bkgrnd-tablet-portrait-1200x1920-1.5x.webp" 1.5x,
+        "../Images/backgrounds/web-lang/web_lang-bkgrnd-tablet-portrait-1600x2560-2x.webp" 2.0x,
+        "../Images/backgrounds/web-lang/web_lang-bkgrnd-tablet-portrait-2400x3840-3x.webp" 3.0x);
+    background-image: -webkit-image-set("../Images/backgrounds/web-lang/web_lang-bkgrnd-tablet-portrait-800x1280.webp",
+        "../Images/backgrounds/web-lang/web_lang-bkgrnd-tablet-portrait-1200x1920-1.5x.webp" 1.5x,
+        "../Images/backgrounds/web-lang/web_lang-bkgrnd-tablet-portrait-1600x2560-2x.webp" 2.0x,
+        "../Images/backgrounds/web-lang/web_lang-bkgrnd-tablet-portrait-2400x3840-3x.webp" 3.0x);
+  }
+}
+
+@media only screen and (orientation: portrait) and (min-aspect-ratio: .61) and (min-width: 801px) and (max-width: 1200px) {
+  body {
+    background-image: image-set("../Images/backgrounds/web-lang/web_lang-bkgrnd-tablet-portrait-1200x1920-1.5x.webp",
+        "../Images/backgrounds/web-lang/web_lang-bkgrnd-tablet-portrait-1600x2560-2x.webp" 1.5x,
+        "../Images/backgrounds/web-lang/web_lang-bkgrnd-tablet-portrait-2400x3840-3x.webp" 2.0x);
+    background-image: -webkit-image-set("../Images/backgrounds/web-lang/web_lang-bkgrnd-tablet-portrait-1200x1920-1.5x.webp",
+        "../Images/backgrounds/web-lang/web_lang-bkgrnd-tablet-portrait-1600x2560-2x.webp" 1.5x,
+        "../Images/backgrounds/web-lang/web_lang-bkgrnd-tablet-portrait-2400x3840-3x.webp" 2.0x);
+  }
+}
+
+@media only screen and (orientation: portrait) and (min-aspect-ratio: .61) and (min-width: 1201px) and (max-width: 1600px) {
+  body {
+    background-image: image-set("../Images/backgrounds/web-lang/web_lang-bkgrnd-tablet-portrait-1600x2560-2x.webp",
+        "../Images/backgrounds/web-lang/web_lang-bkgrnd-tablet-portrait-2400x3840-3x.webp" 1.5x);
+    background-image: -webkit-image-set("../Images/backgrounds/web-lang/web_lang-bkgrnd-tablet-portrait-1600x2560-2x.webp",
+        "../Images/backgrounds/web-lang/web_lang-bkgrnd-tablet-portrait-2400x3840-3x.webp" 1.5x);
+  }
+}
+
+@media only screen and (orientation: portrait) and (min-aspect-ratio: .61) and (min-width: 1601px) {
+  body {
+    background-image: url("../Images/backgrounds/web-lang/web_lang-bkgrnd-tablet-portrait-2400x3840-3x.webp");
+  }
+}
+
+/* Mobile Landscape */
+@media only screen and (orientation: landscape) and (aspect-ratio >=1.9) and (max-width: 800px) {
+  body {
+    background-image: image-set("../Images/backgrounds/web-lang/web_lang-bkgrnd-mobile-landscape-800x360.webp",
+        "../Images/backgrounds/web-lang/web_lang-bkgrnd-mobile-landscape-1200x540-1.5x.webp" 1.5x,
+        "../Images/backgrounds/web-lang/web_lang-bkgrnd-mobile-landscape-1600x720-2x.webp" 2.0x,
+        "../Images/backgrounds/web-lang/web_lang-bkgrnd-mobile-landscape-2400x1080-3x.webp" 3.0x,
+        "../Images/backgrounds/web-lang/web_lang-bkgrnd-mobile-landscape-3200x1440-4x.webp" 4.0x);
+    background-image: -webkit-image-set("../Images/backgrounds/web-lang/web_lang-bkgrnd-mobile-landscape-800x360.webp",
+        "../Images/backgrounds/web-lang/web_lang-bkgrnd-mobile-landscape-1200x540-1.5x.webp" 1.5x,
+        "../Images/backgrounds/web-lang/web_lang-bkgrnd-mobile-landscape-1600x720-2x.webp" 2.0x,
+        "../Images/backgrounds/web-lang/web_lang-bkgrnd-mobile-landscape-2400x1080-3x.webp" 3.0x,
+        "../Images/backgrounds/web-lang/web_lang-bkgrnd-mobile-landscape-3200x1440-4x.webp" 4.0x);
+  }
+}
+
+@media only screen and (orientation: landscape) and (aspect-ratio >=1.9) and (min-width: 801px) and (max-width: 1200px) {
+  body {
+    background-image: image-set("../Images/backgrounds/web-lang/web_lang-bkgrnd-mobile-landscape-1200x540-1.5x.webp",
+        "../Images/backgrounds/web-lang/web_lang-bkgrnd-mobile-landscape-1600x720-2x.webp" 1.5x,
+        "../Images/backgrounds/web-lang/web_lang-bkgrnd-mobile-landscape-2400x1080-3x.webp" 2.0x,
+        "../Images/backgrounds/web-lang/web_lang-bkgrnd-mobile-landscape-3200x1440-4x.webp" 3.0x);
+    background-image: -webkit-image-set("../Images/backgrounds/web-lang/web_lang-bkgrnd-mobile-landscape-1200x540-1.5x.webp",
+        "../Images/backgrounds/web-lang/web_lang-bkgrnd-mobile-landscape-1600x720-2x.webp" 1.5x,
+        "../Images/backgrounds/web-lang/web_lang-bkgrnd-mobile-landscape-2400x1080-3x.webp" 2.0x,
+        "../Images/backgrounds/web-lang/web_lang-bkgrnd-mobile-landscape-3200x1440-4x.webp" 3.0x);
+  }
+}
+
+@media only screen and (orientation: landscape) and (aspect-ratio >=1.9) and (min-width: 1201px) and (max-width: 1600px) {
+  body {
+    background-image: image-set("../Images/backgrounds/web-lang/web_lang-bkgrnd-mobile-landscape-1600x720-2x.webp",
+        "../Images/backgrounds/web-lang/web_lang-bkgrnd-mobile-landscape-2400x1080-3x.webp" 1.5x,
+        "../Images/backgrounds/web-lang/web_lang-bkgrnd-mobile-landscape-3200x1440-4x.webp" 2.0x);
+    background-image: -webkit-image-set("../Images/backgrounds/web-lang/web_lang-bkgrnd-mobile-landscape-1600x720-2x.webp",
+        "../Images/backgrounds/web-lang/web_lang-bkgrnd-mobile-landscape-2400x1080-3x.webp" 1.5x,
+        "../Images/backgrounds/web-lang/web_lang-bkgrnd-mobile-landscape-3200x1440-4x.webp" 2.0x);
+  }
+}
+
+@media only screen and (orientation: landscape) and (aspect-ratio >=1.9) and (min-width: 1601px) and (max-width: 2400px) {
+  body {
+    background-image: image-set("../Images/backgrounds/web-lang/web_lang-bkgrnd-mobile-landscape-2400x1080-3x.webp",
+        "../Images/backgrounds/web-lang/web_lang-bkgrnd-mobile-landscape-3200x1440-4x.webp" 1.5x);
+    background-image: -webkit-image-set("../Images/backgrounds/web-lang/web_lang-bkgrnd-mobile-landscape-2400x1080-3x.webp",
+        "../Images/backgrounds/web-lang/web_lang-bkgrnd-mobile-landscape-3200x1440-4x.webp" 1.5x);
+  }
+}
+
+@media only screen and (orientation: landscape) and (aspect-ratio >=1.9) and (min-width: 2401px) {
+  body {
+    background-image: url("../Images/backgrounds/web-lang/web_lang-bkgrnd-mobile-landscape-3200x1440-4x.webp");
+  }
+}
+
+/* Desktop or Laptop */
+@media only screen and (orientation: landscape) and (min-aspect-ratio: 1.7) and (max-aspect-ratio: 1.89) and (max-width: 1280px) {
+  body {
+    background-image: image-set(url("../Images/backgrounds/web-lang/web_lang-bkgrnd-desktop-landscape-1280x720.webp"),
+        url("../Images/backgrounds/web-lang/web_lang-bkgrnd-desktop-landscape-1920x1080-1.5x.webp") 1.5x,
+        url("../Images/backgrounds/web-lang/web_lang-bkgrnd-desktop-landscape-2560x1440-2x.webp") 2.0x,
+        url("../Images/backgrounds/web-lang/web_lang-bkgrnd-desktop-landscape-3840x2160-3x.webp") 3.0x);
+    background-image: -webkit-image-set(url("../Images/backgrounds/web-lang/web_lang-bkgrnd-desktop-landscape-1280x720.webp"),
+        url("../Images/backgrounds/web-lang/web_lang-bkgrnd-desktop-landscape-1920x1080-1.5x.webp") 1.5x,
+        url("../Images/backgrounds/web-lang/web_lang-bkgrnd-desktop-landscape-2560x1440-2x.webp") 2.0x,
+        url("../Images/backgrounds/web-lang/web_lang-bkgrnd-desktop-landscape-3840x2160-3x.webp") 3.0x);
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-aspect-ratio: 1.7) and (max-aspect-ratio: 1.89) and (min-width: 1281px) and (max-width: 1920px) {
+  body {
+    background-image: image-set(url("../Images/backgrounds/web-lang/web_lang-bkgrnd-desktop-landscape-1920x1080-1.5x.webp"),
+        url("../Images/backgrounds/web-lang/web_lang-bkgrnd-desktop-landscape-2560x1440-2x.webp") 1.5x,
+        url("../Images/backgrounds/web-lang/web_lang-bkgrnd-desktop-landscape-3840x2160-3x.webp") 2.0x);
+    background-image: -webkit-image-set(url("../Images/backgrounds/web-lang/web_lang-bkgrnd-desktop-landscape-1920x1080-1.5x.webp"),
+        url("../Images/backgrounds/web-lang/web_lang-bkgrnd-desktop-landscape-2560x1440-2x.webp") 1.5x,
+        url("../Images/backgrounds/web-lang/web_lang-bkgrnd-desktop-landscape-3840x2160-3x.webp") 2.0x);
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-aspect-ratio: 1.7) and (max-aspect-ratio: 1.89) and (min-width: 1921px) and (max-width: 2560px) {
+  body {
+    background-image: image-set(url("../Images/backgrounds/web-lang/web_lang-bkgrnd-desktop-landscape-2560x1440-2x.webp"),
+        url("../Images/backgrounds/web-lang/web_lang-bkgrnd-desktop-landscape-3840x2160-3x.webp") 1.5x);
+    background-image: -webkit-image-set(url("../Images/backgrounds/web-lang/web_lang-bkgrnd-desktop-landscape-2560x1440-2x.webp"),
+        url("../Images/backgrounds/web-lang/web_lang-bkgrnd-desktop-landscape-3840x2160-3x.webp") 1.5x);
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-aspect-ratio: 1.7) and (max-aspect-ratio: 1.89) and (min-width: 2561px) {
+  body {
+    background-image: url("../Images/backgrounds/web-lang/web_lang-bkgrnd-desktop-landscape-3840x2160-3x.webp");
+  }
+}
+
+/* Tablet Landscape */
+@media only screen and (orientation: landscape) and (max-aspect-ratio: 1.69) and (max-width: 1280px) {
+  body {
+    background-image: image-set("../Images/backgrounds/web-lang/web_lang-bkgrnd-tablet-landscape-1280x800.webp",
+        "../Images/backgrounds/web-lang/web_lang-bkgrnd-tablet-landscape-1920x1200-1.5x.webp" 1.5x,
+        "../Images/backgrounds/web-lang/web_lang-bkgrnd-tablet-landscape-2560x1600-2x.webp" 2.0x,
+        "../Images/backgrounds/web-lang/web_lang-bkgrnd-tablet-landscape-3840x2400-3x.webp" 3.0x,
+      );
+    background-image: -webkit-image-set("../Images/backgrounds/web-lang/web_lang-bkgrnd-tablet-landscape-1280x800.webp",
+        "../Images/backgrounds/web-lang/web_lang-bkgrnd-tablet-landscape-1920x1200-1.5x.webp" 1.5x,
+        "../Images/backgrounds/web-lang/web_lang-bkgrnd-tablet-landscape-2560x1600-2x.webp" 2.0x,
+        "../Images/backgrounds/web-lang/web_lang-bkgrnd-tablet-landscape-3840x2400-3x.webp" 3.0x,
+      );
+  }
+}
+
+@media only screen and (orientation: landscape) and (max-aspect-ratio: 1.69) and (min-width: 1281px) and (max-width: 1920px) {
+  body {
+    background-image: image-set("../Images/backgrounds/web-lang/web_lang-bkgrnd-tablet-landscape-1920x1200-1.5x.webp",
+        "../Images/backgrounds/web-lang/web_lang-bkgrnd-tablet-landscape-2560x1600-2x.webp" 1.5x,
+        "../Images/backgrounds/web-lang/web_lang-bkgrnd-tablet-landscape-3840x2400-3x.webp" 2.0x,
+      );
+    background-image: -webkit-image-set("../Images/backgrounds/web-lang/web_lang-bkgrnd-tablet-landscape-1920x1200-1.5x.webp",
+        "../Images/backgrounds/web-lang/web_lang-bkgrnd-tablet-landscape-2560x1600-2x.webp" 1.5x,
+        "../Images/backgrounds/web-lang/web_lang-bkgrnd-tablet-landscape-3840x2400-3x.webp" 2.0x,
+      );
+  }
+}
+
+@media only screen and (orientation: landscape) and (max-aspect-ratio: 1.69) and (min-width: 1921px) and (max-width: 2560px) {
+  body {
+    background-image: image-set("../Images/backgrounds/web-lang/web_lang-bkgrnd-tablet-landscape-2560x1600-2x.webp",
+        "../Images/backgrounds/web-lang/web_lang-bkgrnd-tablet-landscape-3840x2400-3x.webp" 1.5x,
+      );
+    background-image: -webkit-image-set("../Images/backgrounds/web-lang/web_lang-bkgrnd-tablet-landscape-2560x1600-2x.webp",
+        "../Images/backgrounds/web-lang/web_lang-bkgrnd-tablet-landscape-3840x2400-3x.webp" 1.5x,
+      );
+  }
+}
+
+@media only screen and (orientation: landscape) and (max-aspect-ratio: 1.69) and (min-width: 2561px) {
+  body {
+    background-image: url("../Images/backgrounds/web-lang/web_lang-bkgrnd-tablet-landscape-3840x2400-3x.webp");
+  }
+}
