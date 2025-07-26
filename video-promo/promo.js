@@ -1,33 +1,52 @@
 const countdownCont = document.getElementById("countdown-container");
+const msDay = 1000 * 60 * 60 * 24
+const msHour = 1000 * 60 * 60
+const msMinute = 1000 * 60
+const msSecond = 1000
+const timeLimitDays = 14
+const timeLimitMS = timeLimitDays * msDay;
+let daysLeft = 0;
+let hoursLeft = 0;
+let minutesLeft = 0;
+let secondsLeft = 0;
 
 const getTimeStamp = () => {
   const date = new Date();
   return date.getTime()
 };
 
-const getElapsedTime = () => { 
-  const timeStamp = getTimeStamp();
-  const elapsed = localStorage.getItem("visited") ? timeStamp - parseInt(JSON.parse(localStorage.getItem("visited"))) : 0;
-  const elapsedDays = Math.floor(elapsed / (1000 * 60 * 60 * 24))
-  const elapsedHours = elapsedDays > 0 ? Math.floor(((elapsedDays * (1000 * 60 * 60 * 24)) - elapsed) / (1000 * 60 * 60)) : Math.floor(elapsed / (1000 * 60 * 60))
-  const elapsedMinutes = elapsedHours > 0 ? Math.floor(((elapsedHours * (1000 * 60 * 60)) - elapsed) / (1000 * 60)) : Math.floor(elapsed / (1000 * 60))
-  const elapsedSeconds = elapsedMinutes > 0 ? Math.floor(((elapsedMinutes * (1000 * 60)) - elapsed) / 1000) : Math.floor(elapsed / 1000)
-  console.log(elapsed, elapsedDays, elapsedHours, elapsedMinutes, elapsedSeconds)
-}
-getElapsedTime()
+const convertTimeLeft = () => { 
+  let time = timeLimitMS - (localStorage.getItem("visited") ? getTimeStamp() - parseInt(JSON.parse(localStorage.getItem("visited"))) : 0);
 
-const hasVisited = () => { 
-  if (localStorage.getItem("hasVisited")) {
-    return true;
-  } else {
-    return false;
-  }
+  daysLeft = time >= msDay ? Math.floor(time / msDay) : 0;
+  time -= (daysLeft * msDay)
+  hoursLeft = time > msHour ? Math.floor(time / msHour) : 0;
+  time -= (hoursLeft * msHour)
+  minutesLeft = time > msMinute ? Math.floor(time / msMinute) : 0;
+  time -= (minutesLeft * msMinute)
+  secondsLeft = time > msSecond ? Math.floor(time / msSecond) : 0;
+  time -= (secondsLeft * msSecond)
+}
+
+const displayTimeLeft = (days, hours, minutes, seconds) => { 
+  const dayCont = countdownCont.children[0]
+  const hourCont = countdownCont.children[1]
+  const minuteCont = countdownCont.children[2]
+  const secondCont = countdownCont.children[3]
+  
+  dayCont.children[1].textContent = days
+  hourCont.children[1].textContent = hours
+  minuteCont.children[1].textContent = minutes
+  secondCont.children[1].textContent = seconds
 }
 
 window.onload = () => { 
-  if (!hasVisited()) {
+  if (!localStorage.getItem("visited")) {
     localStorage.setItem("visited", JSON.stringify(getTimeStamp()))
-  } else if (hasVisited()) {
-    console.log(JSON.parse(localStorage.getItem("visited")))
   }
+
+  setInterval(() => {
+    convertTimeLeft()
+    displayTimeLeft(daysLeft, hoursLeft, minutesLeft, secondsLeft)
+  }, 1000);
 }

@@ -311,6 +311,33 @@ header .content-container img {
   transform-origin: center;
 }
 
+header .countdown-container {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+  border: 1px solid var(--darkText);
+  border-radius: .5rem;
+  padding: 1rem;
+  margin: .5rem 0;
+}
+
+header .countdown-container .title {
+  width: 100%;
+}
+
+header .countdown-container .countdown-unit-container .countdown-label {
+  font-size: 1.5rem;
+}
+
+header .countdown-container .countdown-unit-container .countdown-qty{
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--darkText)
+}
+
   /* VSL Section */
 #vsl-section {
   width: 100vw;
