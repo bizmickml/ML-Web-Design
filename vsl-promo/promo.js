@@ -11,10 +11,8 @@ let daysLeft = 0;
 let hoursLeft = 0;
 let minutesLeft = 0;
 let secondsLeft = 0;
-
-const formHandler = (e) => { 
-  e.preventDefault();
-}
+var youTubePlayer;
+const playBtn = document.getElementById("play-button");
 
 const getTimeStamp = () => {
   const date = new Date();
@@ -51,8 +49,45 @@ const displayTimeLeft = (days, hours, minutes, seconds) => {
   secondCont.children[1].textContent = seconds
 }
 
+  //redirects to home page if not interested
 declineBtn.addEventListener("click", () => { 
   window.location.replace(homePage);
+})
+
+  //play youtube video on clicking placeholder
+playBtn.addEventListener("click", () => { 
+
+  //add script
+  const newScript = document.createElement("script");
+  newScript.src = "https://www.youtube.com/player_api";
+
+  const lastScript = document.getElementsByTagName("script")[document.getElementsByTagName("script").length - 1]
+  lastScript.parentNode.insertBefore(newScript, lastScript);
+
+  const replacedElement = document.getElementById("youTubePlayer");
+  const parentWidth = replacedElement.parentNode.offsetWidth;
+  const parentHeight = replacedElement.parentNode.offsetHeight;
+  const vSLYouTubeId = "lMkxVPOK1Pc";
+
+  window.onYouTubeIframeAPIReady = () =>{ 
+
+    youTubePlayer = new YT.Player('youTubePlayer', {
+      height: `${parentHeight}`, 
+      width: `${parentWidth}`,
+      videoId: vSLYouTubeId,
+      playerVars: {
+        'playsinline': 1
+      },
+      events: {
+        'onReady': onPlayerReady,
+      }
+    })
+  }
+  
+  const onPlayerReady = (e) => { 
+    e.target.playVideo()
+  }
+
 })
 
 window.onload = () => { 
