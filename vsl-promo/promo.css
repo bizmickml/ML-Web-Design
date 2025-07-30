@@ -38,6 +38,7 @@
   --bckgrnd-light: #fff3d4;
   --bckgrnd-light-trans: rgba(243, 244, 248, 0.643);
   --bckgrnd-yellow: #fecc04;
+  --overlay: rgba(0, 0, 0, 0.33);
   --bckgrnd-brown: #cf9301;
   --accent-blue: #486BFC;
   --bckgrnd-blue-bright: #2c47ce;
@@ -74,7 +75,8 @@ html {
   /* site background */
 body {
   position: relative;
-  width: 100%;
+  width: calc(100vw - calc(100vw - 100%));
+  min-width: 320px;
 }
 
 body .page-background {
@@ -267,7 +269,7 @@ body .page-background .overlay {
   background-color: var(--bckgrnd-light-trans);
 }
   /* buttons */
-button {
+button:not(.play-btn) {
   padding: .25rem 2rem;
   font-size: 1.2rem;
   font-family: var(--subheading);
@@ -281,15 +283,15 @@ button {
   cursor: pointer;
 }
 
-button:hover {
+button:not(.play-btn):hover {
   transform: scale(1.03);
   box-shadow: .1rem .1rem .3rem var(--boxShadowDark);
 }
 
   /* Header */
 header {
-  width: 100vw;
-  height: var(--headHeight);
+  width: 100%;
+  min-height: var(--headHeight);
 }
 
 header .content-container {
@@ -298,10 +300,11 @@ header .content-container {
   margin: 0 auto;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   padding: 1rem 2rem;
+  gap: 20px;
 }
 
 header .content-container img {
@@ -322,10 +325,13 @@ header .countdown-container {
   border-radius: .5rem;
   padding: 1rem;
   margin: .5rem 0;
+  background-color: var(--lightText);
+  box-shadow: -.2rem .2rem .5rem var(--boxShadow);
 }
 
-header .countdown-container .title {
-  width: 100%;
+header .timer-wrapper .title {
+  text-align: center;
+  font-size: 1.35rem;
 }
 
 header .countdown-container .countdown-unit-container .countdown-label {
@@ -341,12 +347,18 @@ header .countdown-container .countdown-unit-container .countdown-qty{
   /* VSL Section */
 #vsl-section {
   width: 100vw;
+  padding: 0 1rem 2rem;
+  display: block;
+}
+
+#vsl-section .flex-container {
+  width: 100%;
   min-height: calc(100vh - var(--headHeight));
-  padding: 0 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
+  row-gap: 2rem;
 }
 
 #vsl-section .text-vid-wrapper {
@@ -359,6 +371,7 @@ header .countdown-container .countdown-unit-container .countdown-qty{
 
 #vsl-section .text-container {
   position: relative;
+  display: block;
   max-width: 1400px;
   min-width: 300px;
   text-align: center;
@@ -369,7 +382,7 @@ header .countdown-container .countdown-unit-container .countdown-qty{
 
 #vsl-section .text-container .accent-box {
   width: 100%;
-  height: 25rem;
+  height: 30rem;
   background-color: var(--bckgrnd-blue-bright);
   position: absolute;
   top: 0;
@@ -394,16 +407,59 @@ header .countdown-container .countdown-unit-container .countdown-qty{
   margin: 1rem 1rem 0;
 }
 
+#vsl-section .text-container .instructions {
+  margin-top: 2rem;
+}
+
 #vsl-section .video-container {
+  position: relative;
+  display: block;
   max-width: 924px;
+  width: clamp(280px, -46px + 101vw, 1380px);
   aspect-ratio: 16/9;
   height: auto;
-  margin: 2rem auto 0 ;
-  background-color: var(--bckgrnd-light);
+  margin: .8rem auto 0;
   border: none;
   border-radius: .5rem;
   overflow: hidden;
   box-shadow: 0 0 .5rem var(--boxShadowDark);
+}
+
+#vsl-section .video-container img {
+  position: absolute;
+  object-fit: cover;
+  object-position: center;
+  aspect-ratio: 16/9;
+  z-index: -1;
+}
+
+#vsl-section .video-container .overlay {
+  position: absolute;
+  background-color: var(--overlay);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+#vsl-section .video-container .play-btn {
+  border: .2rem solid white;
+  color: white;
+  background-color: transparent;
+  border-radius: 100%;
+  width: 5rem;
+  max-width: 100px;
+  aspect-ratio: 1;
+  height: auto;
+  box-shadow: 0 0 .5rem var(--boxShadow);
+  font-size: 2rem;
+  transition-duration: 200ms;
+}
+
+#vsl-section .video-container .play-btn:hover {
+  transform: scale(1.05);
 }
 
 #vsl-section .cta-container {
@@ -430,9 +486,18 @@ header .countdown-container .countdown-unit-container .countdown-qty{
   gap: 1rem;
 }
 
+#vsl-section .cta-container fieldset {
+  width: 100%;
+  border: none;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  max-width: 800px;
+}
+
 #vsl-section .cta-container form label,
 #vsl-section .cta-container form input {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-family: var(--bodyText);
 }
 

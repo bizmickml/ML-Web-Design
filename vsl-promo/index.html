@@ -212,22 +212,26 @@
         loading="lazy"
         src="../Images/logo/logo-landscape-250x100-2x.webp"
       />
-      <div id="countdown-container" class="countdown-container">
-        <div class="countdown-unit-container">
-          <div class="countdown-label">Days</div>
-          <div class="countdown-qty"></div>
-        </div>
-        <div class="countdown-unit-container">
-          <div class="countdown-label">Hours</div>
-          <div class="countdown-qty"></div>
-        </div>
-        <div class="countdown-unit-container">
-          <div class="countdown-label">Minutes</div>
-          <div class="countdown-qty"></div>
-        </div>
-        <div class="countdown-unit-container">
-          <div class="countdown-label">Seconds</div>
-          <div class="countdown-qty"></div>
+        <!-- countdown timer -->
+      <div class="timer-wrapper">
+        <div class="title">Limited Time Offer!</div>
+        <div class="countdown-container">
+          <div class="countdown-unit-container">
+            <div class="countdown-label">Days</div>
+            <div class="countdown-qty"></div>
+          </div>
+          <div class="countdown-unit-container">
+            <div class="countdown-label">Hours</div>
+            <div class="countdown-qty"></div>
+          </div>
+          <div class="countdown-unit-container">
+            <div class="countdown-label">Minutes</div>
+            <div class="countdown-qty"></div>
+          </div>
+          <div class="countdown-unit-container">
+            <div class="countdown-label">Seconds</div>
+            <div class="countdown-qty"></div>
+          </div>
         </div>
       </div>
     </div>
@@ -235,37 +239,43 @@
   
     <!-- VSL Section -->
   <section id="vsl-section">
-    <div class="text-vid-wrapper">
-      <div class="text-container">
-        <div class="accent-box"></div>
-        <h1>Websites That Produce <em>Real</em> Results</h1>
-        <h2>Get a website that consistently turns your story into loyal customers!</h2>
+    <div class="flex-container">
+      <div class="text-vid-wrapper">
+        <div class="text-container">
+          <div class="accent-box"></div>
+          <h1>Websites That Produce <em>Real</em> Results</h1>
+          <h2>Get a website that consistently turns your story into loyal customers!</h2>
+          <div class="instructions">Make sure your volume is up - Play the video for your special offer.</div>
+        </div>
+        <div class="video-container">
+            <!-- cover img for video -->
+          <img
+            sizes=""
+            srcset=""
+            alt="placeholder"
+            loading="lazy"
+            src="https://picsum.dev//1280/720"
+          />
+          <div class="overlay">
+            <button id="play-button" class="play-btn" type="button">▶</button>
+          </div>
+        </div>
       </div>
-      <div class="video-container">
-        <iframe width="100%" height="auto" src="" title=""
-          frameborder="0"
-          allow="">
-        </iframe>
+      <div class="cta-container">
+        <form action="https://formspree.io/f/mblkglva" method="POST" name="VSL_lead_form">
+          <fieldset>
+            <label for="name-input">Enter your name:</label>
+            <input id="name-input" name="Name" type="text" placeholder="Theodore Roosevelt" required autocomplete="name">
+          </fieldset>
+          <fieldset>
+            <label for="email-input">Enter your email:</label>
+            <input id="email-input" name="Email" type="email" placeholder="your_name@email.com" required autocomplete="email">
+          </fieldset>
+          <button class="cta-btn" type="submit">Claim Offer Now</button>
+        </form>
+        <button id="decline-button" class="decline-btn" type="button">No thanks Mike, I don't want to claim this amazing offer</button>
       </div>
     </div>
-    <div class="cta-container">
-      <form action="" name="VSL_lead_form">
-        <label for="email-input">Enter your email:</label>
-        <input id="email-input" name="Email" type="email" placeholder="your_name@email.com" required autocomplete="email">
-        <button class="cta-btn" type="submit">Get Started Now</button>
-      </form>
-      <button id="decline-button" class="decline-btn" type="button">No thanks Mike, I don't want to claim this amazing offer</button>
-    </di>
-  </section>
-
-    <!-- Next Step Section -->
-  <section>
-
-  </section>
-
-    <!-- Sales Letter Section (to include video script) -->
-  <section>
-
   </section>  
   <script src="./promo.js"></script>
 </body>
