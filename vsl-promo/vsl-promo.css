@@ -288,6 +288,10 @@ button:not(.play-btn):hover {
   box-shadow: .1rem .1rem .3rem var(--boxShadowDark);
 }
 
+.hidden {
+  display: none;
+}
+
   /* Header */
 header {
   width: 100%;

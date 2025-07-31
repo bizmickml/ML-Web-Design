@@ -1,3 +1,4 @@
+const timerWrapper = document.getElementsByClassName("timer-wrapper")[0];
 const countdownCont = document.getElementsByClassName("countdown-container")[0];
 const msDay = 1000 * 60 * 60 * 24
 const msHour = 1000 * 60 * 60
@@ -85,13 +86,20 @@ playBtn.addEventListener("click", () => {
 
 window.onload = () => { 
   if (!localStorage.getItem("visited")) {
-    localStorage.setItem("visited", JSON.stringify(getTimeStamp()))
+    localStorage.setItem("visited", JSON.stringify(getTimeStamp()));
+
+    setInterval(() => {
+      convertTimeLeft()
+      displayTimeLeft(daysLeft, hoursLeft, minutesLeft, secondsLeft)
+    }, 1000);
+    timerWrapper.classList.contains("hidden") && timerWrapper.classList.remove("hidden");
 
   } else if (localStorage.getItem("visited") && (getTimeLeft() > 0)) {
     setInterval(() => {
       convertTimeLeft()
       displayTimeLeft(daysLeft, hoursLeft, minutesLeft, secondsLeft)
     }, 1000);
+    timerWrapper.classList.contains("hidden") && timerWrapper.classList.remove("hidden");
 
   } else {
     window.location.href="https:\/\/www.website-roi.com";  }

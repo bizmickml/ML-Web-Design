@@ -25,6 +25,8 @@ html {
 }
 
 body { 
+  display: block;
+  position: relative;
   width: 100%;
   background-image: url(../Images/background_img.webp);
   background-position: center;

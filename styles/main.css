@@ -181,9 +181,7 @@ header .flex-container img#logo {
   height: 100%;
   width: auto;
   aspect-ratio: 5/2;
-  border-radius: 100%;
-  border: 1px solid #fecc04;
-  box-shadow: -0.1rem 0.1rem 0.3rem #001f29;
+  border: none;
 }
 header .flex-container #phone-link {
   font-size: 1.6rem;
@@ -777,6 +775,11 @@ footer {
   animation-fill-mode: forwards;
 }
 
+.rotate-slow {
+  animation: rotate-slow 6000ms linear infinite;
+  transform-origin: center;
+}
+
 @keyframes fade-in {
   to {
     opacity: unset;
@@ -795,6 +798,14 @@ footer {
 @keyframes spin-Y {
   to {
     transform: rotateY(360deg);
+  }
+}
+@keyframes rotate-slow {
+  50% {
+    transform: rotateY(90deg);
+  }
+  90% {
+    transform: rotateY(0deg);
   }
 }
 .hover.grow:hover {
@@ -835,6 +846,8 @@ html {
 }
 
 body {
+  display: block;
+  position: relative;
   width: 100%;
   background-image: url(../Images/background_img.webp);
   background-position: center;

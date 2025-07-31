@@ -131,7 +131,20 @@
 <body>
   <header>
     <div class="flex-container">
-      <img id="logo" src="./Images/ml_web_design_logo.webp" alt="WebDev.ML logo" class="animate rotate-Y delay-3 count-infinite length-6000">
+      <img
+        id="logo"
+        sizes="(max-width: 1280px) 250px, 
+          (min-width: 1281px) 375px"
+        srcset="../Images/logo/logo-landscape-125x50.webp 125w, 
+          ../Images/logo/logo-landscape-250x100-2x.webp 250w,
+          ../Images/logo/logo-landscape-375x150-3x.webp 375w,
+          ../Images/logo/logo-landscape-500x200-4x.webp 500w,
+          ../Images/logo/logo-landscape-625x250-5x.webp 625w"
+        alt="logo" 
+        fetchpriority="high"
+        src="../Images/logo/logo-landscape-250x100-2x.webp"
+        class="rotate-slow"
+      />
       <a href="tel:5085587844" id="phone-link" onclick="gtag_report_conversion()" class="hover grow hov-length-200">(508) 558-7844</a>
       <nav id="nav">
         <ul>
@@ -239,7 +252,7 @@
           <h3>Starting Strong</h3>
           <h4>Option #1</h4>
           <p class="reg-price-txt">Regular price <span class="reg-price-amount">$1,499.97</span></p>
-          <p class="offer-price-txt">Starting at only <span class="offer-price-amount">$499.97</span>*</p>
+          <p class="offer-price-txt">Starting as low as <span class="offer-price-amount">$499.97</span>*</p>
 
         </div>
         <div class="package-description">
@@ -265,8 +278,8 @@
         <div class="package-header-container">
           <h3>E-commerce Integration</h3>
           <h4>Option #2</h4>
-          <p class="reg-price-txt">Regular price <span class="reg-price-amount">$2,999.97</span></p>
-          <p class="offer-price-txt">Starting at only <span class="offer-price-amount">$1,499.97</span>*</p>
+          <p class="reg-price-txt">Regular price <span class="reg-price-amount">$5,999.97</span></p>
+          <p class="offer-price-txt">Starting as low as <span class="offer-price-amount">$3,599.97</span>*</p>
         </div>
         <div class="package-description">
           <p>This package includes everything that is in the "Starting Strong" package</p>
@@ -302,8 +315,8 @@
         <div class="package-header-container">
           <h3>Prosperity Package</h3>
           <h4>Monthly service option</h4>
-          <p class="reg-price-txt">Regular price <span class="reg-price-amount">$299.97/mo.</span></p>
-          <p class="offer-price-txt">Starting at only <span class="offer-price-amount">$149.97/mo.</span>*</p>
+          <p class="reg-price-txt">Regular price <span class="reg-price-amount">$599.97/mo.</span></p>
+          <p class="offer-price-txt">Starting at only <span class="offer-price-amount">$299.97/mo.</span>*</p>
         </div>
         <div class="package-description">
           <p><strong>Lowest startup cost</strong> - this service option brings you everything you need for an extremely profitable online presence, <em>all included</em> at one, low monthly cost.</p>
@@ -356,7 +369,7 @@
         <div class="package-header-container">
           <h3>Web App Development</h3>
           <p class="reg-price-txt">Regular price <span class="reg-price-amount">$15,999.97</span></p>
-          <p class="offer-price-txt">Starting at only <span class="offer-price-amount">$9,999.97</span>*</p>
+          <p class="offer-price-txt">Starting as low as <span class="offer-price-amount">$9,999.97</span>*</p>
         </div>
         <p class="package-description">Choose this option if you have an app idea and need a web developer to help you create it.</p>
         <div class="item-list-container">
