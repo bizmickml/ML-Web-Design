@@ -4,12 +4,46 @@
   <meta charset="UTF-8">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="promo.css">
+  <link rel="preconnect" href="./vsl-promo.css">
+  <link rel="preconnect" href="./vsl-promo.js">
+  <link rel="stylesheet" href="./vsl-promo.css">
   <link rel="icon" href="../Images/logo/logo-square-50x50.webp">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Websites That Produce Results</title>
   <meta name="description"
     content="Website design - I build fully custom websites that consistently convert your story into loyal customers!">
+    <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17332276422"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'AW-17332276422');
+  </script>
+    <!--  Event snippet for Contact conversion page --
+          In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+  <script>
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+          'send_to': 'AW-17332276422/6CuOCIuy0e4aEMaZ1shA',
+          'event_callback': callback
+      });
+      return false;
+    }
+  </script>
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "sd94btekav");
+  </script>
 </head>
 
 <body>
@@ -205,12 +239,12 @@
         sizes="(max-width: 1280px) 250px, 
           (min-width: 1281px) 375px"
         srcset="../Images/logo/logo-landscape-125x50.webp 125w, 
-        ../Images/logo/logo-landscape-250x100-2x.webp 250w,
-        ../Images/logo/logo-landscape-375x150-3x.webp 375w,        
-        ../Images/logo/logo-landscape-500x200-4x.webp 500w,
-        ../Images/logo/logo-landscape-625x250-5x.webp 625w"
-        alt="" 
-        loading="lazy"
+          ../Images/logo/logo-landscape-250x100-2x.webp 250w,
+          ../Images/logo/logo-landscape-375x150-3x.webp 375w,
+          ../Images/logo/logo-landscape-500x200-4x.webp 500w,
+          ../Images/logo/logo-landscape-625x250-5x.webp 625w"
+        alt="logo" 
+        fetchpriority="high"
         src="../Images/logo/logo-landscape-250x100-2x.webp"
       />
         <!-- countdown timer -->
@@ -253,19 +287,19 @@
             <!-- cover img for video -->
           <img
             sizes="(max-width: 360px) 320w,
-              (max-width: 520px) 480w, 
-              (max-width: 680px) 640w,
-              (width >= 681px) 960w"
+              (width > 360px) and (max-width: 520px) 480w, 
+              (width > 520px) and (max-width: 680px) 640w,
+              (width > 680px) 960w"
             srcset="../Images/vsl_cover_photo/vsl_cover-320x180.webp 320w,
-            ../Images/vsl_cover_photo/vsl_cover-480x270.webp 480w,
-            ../Images/vsl_cover_photo/vsl_cover-640x360.webp 640w,
-            ../Images/vsl_cover_photo/vsl_cover-960x540.webp 960w,
-            ../Images/vsl_cover_photo/vsl_cover-1280x720.webp 1280w,
-            ../Images/vsl_cover_photo/vsl_cover-1920x1080.webp 1920w,
-            ../Images/vsl_cover_photo/vsl_cover-2560x1440.webp 2560w, 
-            ../Images/vsl_cover_photo/vsl_cover-3840x2400.webp 3840w"
+              ../Images/vsl_cover_photo/vsl_cover-480x270.webp 480w,
+              ../Images/vsl_cover_photo/vsl_cover-640x360.webp 640w,
+              ../Images/vsl_cover_photo/vsl_cover-960x540.webp 960w,
+              ../Images/vsl_cover_photo/vsl_cover-1280x720.webp 1280w,
+              ../Images/vsl_cover_photo/vsl_cover-1920x1080.webp 1920w,
+              ../Images/vsl_cover_photo/vsl_cover-2560x1440.webp 2560w, 
+              ../Images/vsl_cover_photo/vsl_cover-3840x2400.webp 3840w"
             alt="video cover"
-            loading="lazy"
+            fetchpriority="high"
             src="../Images/vsl_cover_photo/vsl_cover-1280x720.webp"
           />
           <div class="overlay">
@@ -275,7 +309,7 @@
       </div>
       <div class="cta-container">
         <form action="https://formsubmit.co/37ea28794195f021f14f89981b61347c" method="POST" name="VSL_lead_form">
-          <input type="hidden" name="_next" value="https://www.website-roi.com/vsl-promo/thank-you.html">
+          <input type="hidden" name="_next" value="https://www.website-roi.com/vsl-promo/thank-you-page">
           <input type="hidden" name="_subject" value="New web form submission!">
           <input type="hidden" name="_captcha" value="false">
           <fieldset>
@@ -286,13 +320,13 @@
             <label for="email-input">Email:</label>
             <input id="email-input" name="Email" type="email" placeholder="your_name@email.com" required autocomplete="email">
           </fieldset>
-          <button class="cta-btn" type="submit">Claim Offer Now</button>
+          <button class="cta-btn" type="submit" onclick="gtag_report_conversion()">Claim Offer Now</button>
         </form>
-        <button id="decline-button" class="decline-btn" type="button">No thanks Mike, I don't want to claim this amazing offer</button>
+        <button id="decline-button" class="decline-btn" type="button" onclick="window.location.href='https:\/\/www.website-roi.com'">No thanks Mike, I don't want to claim this amazing offer</button>
       </div>
     </div>
   </section> 
   <footer>Copyright 2025 © Michael Lamondy | All Rights Reserved</footer> 
-  <script src="./promo.js"></script>
+  <script src="./vsl-promo.js"></script>
 </body>
 </html>

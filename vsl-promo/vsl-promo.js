@@ -1,6 +1,4 @@
-const declineBtn = document.getElementById("decline-button");
 const countdownCont = document.getElementsByClassName("countdown-container")[0];
-const homePage = "../index.html"
 const msDay = 1000 * 60 * 60 * 24
 const msHour = 1000 * 60 * 60
 const msMinute = 1000 * 60
@@ -49,11 +47,6 @@ const displayTimeLeft = (days, hours, minutes, seconds) => {
   secondCont.children[1].textContent = seconds
 }
 
-  //redirects to home page if not interested
-declineBtn.addEventListener("click", () => { 
-  window.location.replace(homePage);
-})
-
   //play youtube video on clicking placeholder
 playBtn.addEventListener("click", () => { 
 
@@ -101,6 +94,6 @@ window.onload = () => {
     }, 1000);
 
   } else {
-    window.location.replace(homePage);  }
+    window.location.href="https:\/\/www.website-roi.com";  }
 }
 

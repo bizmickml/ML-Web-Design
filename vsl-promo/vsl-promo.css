@@ -517,6 +517,7 @@ header .countdown-container .countdown-unit-container .countdown-qty{
 #vsl-section .cta-container form button {
   width: 90%;
   cursor: pointer;
+  margin-top: 1rem;
 }
 
 #vsl-section .cta-container #decline-button {
@@ -534,8 +535,7 @@ header .countdown-container .countdown-unit-container .countdown-qty{
 }
 
 footer {
-  position: sticky;
-  bottom: 0;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
