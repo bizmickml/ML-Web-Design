@@ -1,0 +1,551 @@
+@use "../../sass_partials/set-page";
+@use "../../sass_partials/classes";
+@use "../../sass_partials/animations";
+
+$bckgrnd-light: #fff3d4;
+$bckgrnd-light-trans: rgba(243, 244, 248, 0.643);
+$bckgrnd-yellow: #fecc04;
+$overlay: rgba(0, 0, 0, 0.35);
+$overlayDark: rgba(0, 0, 0, 0.65);
+$bckgrnd-brown: #cf9301;
+$accent-blue: #486BFC;
+$bckgrnd-blue-bright: #2c47ce;
+$accent: #40d160;
+$accent2: #ff8416;
+$accent3: #ff565c;
+$accent4: #A1DA1b;
+$darkText: #181301;
+$lightText: #f3f4f8;
+$headHeight: 8rem;
+$boxShadow: rgba(0, 0, 0, .3);
+$boxShadowDark: rgba(0, 0, 0, .5);
+$headline: "Nerko One", cursive, sans-serif;
+$subheading: "Coming Soon", cursive, sans-serif;
+$bodyText: "Nunito", sans-serif; 
+
+// Site Background
+body {
+  display: block;
+  position: static;
+  width: 100vw;
+    //sets min design width for small older cell phones
+  min-width: 320px;
+  scroll-margin-top: $headHeight;
+
+  .page-background {
+    $bkgrndIconDelayX: 2373ms;
+
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: -10;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    .icon-container {
+      width: clamp(50px, 40px + 2.8vw, 150px);
+      height: clamp(50px, 40px + 2.8vw, 150px);
+      position: fixed;
+      transform-origin: center;
+      z-index: -8;
+      animation-timing-function: linear;
+      animation-duration: 25000ms;
+      animation-iteration-count: infinite;
+      transform-style: preserve-3d;
+
+      img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        z-index: -6;
+      }
+
+        // left side icons
+      &:nth-child(odd) {
+        left: 0;
+        animation-name: float-up-left;
+      }
+
+      &.ic1 {
+        bottom: clamp(20px, 5.5vh, 176px);
+        transform: rotate(20deg); 
+        
+        img {
+          position: absolute;
+          left: -25%;
+        }
+      }
+
+      &.ic3 {
+        bottom: clamp(60px, 16.5vh, 528px);
+        transform: rotate(-20deg);
+        animation-delay: $bkgrndIconDelayX * 3;
+        
+        img {
+          position: absolute;
+          left: 20%;        
+        }
+      }
+
+      &.ic5 {
+        bottom: clamp(99px, 27.5vh, 880px);
+        transform: rotate(30deg);
+        animation-delay: calc($bkgrndIconDelayX * 5);
+        
+        img {
+          position: absolute;
+          left: 150%        
+        }
+      }
+
+      &.ic7 {
+        bottom: clamp(138px, 38.5vh, 1232px);
+        transform: rotate(-10deg);
+        animation-delay: calc($bkgrndIconDelayX * 7);
+        
+        img {
+          position: absolute;
+          left: 50%;
+
+        }
+      }
+
+      &.ic9 {
+        bottom: clamp(178px, 49.5vh, 1584px);
+        transform: rotate(5deg);
+        animation-delay: calc($bkgrndIconDelayX * 9);
+        
+        img {
+          position: absolute;
+          left: 0;
+        
+        }
+      }
+
+      &.ic11 {
+        bottom: clamp(237px, 66vh, 2112px);
+        transform: rotate(-3deg);
+        animation-delay: calc($bkgrndIconDelayX * 11);
+        
+        img {
+          position: absolute;
+          left: 200%;
+        
+        }
+      }
+
+        // Right side icons
+      &:nth-child(even) {
+        right: 0;
+        animation-name: float-up-right;
+      }
+
+      &.ic2 {
+        top: clamp(81px, 22.5vh, 720px);
+        transform: rotate(-20deg);
+        animation-delay: calc($bkgrndIconDelayX * 2);
+        
+        img {
+          position: absolute;
+          right: -25%;
+        
+        }
+      }
+
+      &.ic4 {
+        top: clamp(121px, 1px + 33.49vh, 1072px);
+        transform: rotate(20deg);
+        animation-delay: calc($bkgrndIconDelayX * 4);
+        
+        img {
+          position: absolute;
+          right: 20%;
+        
+        }
+      }
+
+      &.ic6 {
+        top: clamp(161px, 1px + 44.48vh, 1424px);
+        transform: rotate(-30deg);
+        animation-delay: calc($bkgrndIconDelayX * 6);
+        
+        img {
+          position: absolute;
+          right: 150%;
+        
+        }
+      }
+
+      &.ic8 {
+        top: clamp(200px, 1px + 55.5vh, 1776px);
+        transform: rotate(-10deg);
+        animation-delay: calc($bkgrndIconDelayX * 8);
+        
+        img {
+          position: absolute;
+          right: 50%;
+        
+        }
+      }
+
+      &.ic10 {
+        top: clamp(240px, 1px + 66.48vh, 2128px);
+        transform: rotate(-5deg);
+        animation-delay: calc($bkgrndIconDelayX * 10);
+        
+        img {
+          position: absolute;
+          right: 0;
+        
+        }
+      }
+
+      &.ic12 {
+        top: clamp(299px, 1px + 83vh, 2656px);
+        transform: rotate(-3deg);
+        animation-delay: calc($bkgrndIconDelayX * 12);
+        
+        img {
+          position: absolute;
+          right: 100%;
+        
+        }
+      }
+    }
+
+    .overlay {
+      position: absolute;
+      height: 100vh;
+      width: 100vw;
+      z-index: -1;
+      background-color: $bckgrnd-light-trans;
+    
+    }
+  }
+}
+
+// Buttons
+button:not(.play-btn) {
+  padding: .5rem 3rem;
+  font-size: 1.6rem;
+  font-family: $subheading;
+  font-weight: bold;
+  background-color: $bckgrnd-yellow;
+  color: $darkText;
+  border: none;
+  border-radius: .2rem;
+  box-shadow: .08rem .08rem .2rem $boxShadow;
+  transition: 150ms;
+  cursor: pointer;
+
+  p {
+    font-size: 1.2rem;
+    font-family: $bodyText;
+  }
+
+  &:hover {
+    transform: scale(1.03);
+    box-shadow: .1rem .1rem .3rem $boxShadowDark;
+  } 
+}
+
+// Header 
+header {
+  width: 100vw;
+  min-height: $headHeight;
+
+  .content-container {
+    max-width: 1400px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+
+    h1 {
+      font-family: $headline;
+      font-size: 5.2rem;
+      line-height: .75;
+      color: $darkText;
+      text-align: center;
+    }
+  }
+  
+}
+
+// VSL section
+section#vsl-section {
+  width: 100vw;
+  min-height: calc(100vh - $headHeight);
+  padding: 0 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 1rem;
+
+  .text-vid-wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    .text-container {
+      position: relative;
+      display: block;
+      max-width: 1400px;
+      min-width: 300px;
+      text-align: center;
+      color: white;
+      overflow: visible;
+      text-shadow: .2rem .2rem .3rem $boxShadow;
+      
+      .accent-box {
+        width: 100%;
+        height: 25rem;
+        background-color: $bckgrnd-blue-bright;
+        position: absolute;
+        top: 0;
+        z-index: -1;
+        border:none;
+        border-radius: .5rem;
+        box-shadow: 0 0 1rem $boxShadow;
+      }
+
+      h2 {
+        font-family: $subheading;
+        font-weight: bold;
+        font-size: 2rem;
+        line-height: 1.3;
+        margin: 1rem;
+
+        span {
+          font-size: 2.1rem;
+        }
+      }
+
+      .instructions {
+        margin: 2rem 1rem 0;
+        font-size: 1.4rem;
+
+        span {
+          font-size: 1.2rem;
+        }
+      }
+
+    }
+
+    .video-container {
+      position: relative;
+      display: block;
+      max-width: 924px;
+      width: clamp(280px, -46px + 101vw, 1380px);
+      aspect-ratio: 16/9;
+      height: auto;
+      margin: .8rem auto 0;
+      border: none;
+      border-radius: .5rem;
+      overflow: hidden;
+      box-shadow: 0 0 .5rem $boxShadowDark;
+
+      img:not(.icon) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        object-fit: cover;
+        object-position: center center;
+        width: 100%;
+        aspect-ratio: 16/9;
+        height: auto;
+        z-index: -1;
+      }
+
+      .overlay {
+        position: absolute;
+        display: block;
+        background-color: $overlay;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition-duration: 500ms;
+        z-index: 1;
+
+        &:hover {
+          background: radial-gradient(circle at center, white, $overlayDark 45%); 
+        }
+
+        .play-btn {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          border: none;
+          color: white;
+          background-color: #FF0000;
+          border-radius: 1rem;
+          width: 6rem;
+          max-width: 100px;
+          aspect-ratio: 16/9;
+          height: auto;
+          box-shadow: 0 0 .5rem $boxShadow;
+          font-size: 2rem;
+          transition-duration: 200ms;
+
+          &:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 1rem $boxShadowDark;
+          }
+
+          img.icon {
+            width: 50%;
+            height: auto;
+          }
+
+        }
+      }
+    }
+  }
+}
+// CTA section
+section#cta-section {
+  width: 100vw;
+  min-height: 100vh;
+  padding: 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2rem;
+
+  .text-wrapper {
+    h2 {
+      font-size: 3rem;
+    }
+  
+    p {
+      font-size: 1.8rem;
+    }
+  }
+
+  .timer-wrapper {
+
+    .title {
+      text-align: center;
+      font-size: 1.6rem;     
+    }
+    
+    .countdown-container {
+      display: flex;
+      gap: 1.4rem;
+      flex-wrap: nowrap;
+      align-items: center;
+      justify-content: space-evenly;
+      text-align: center;
+      border: 1px solid $darkText;
+      border-radius: .5rem;
+      padding: .8rem;
+      margin: .5rem 0;
+      background-color: $lightText;
+      box-shadow: -.2rem .2rem .5rem $boxShadow;
+
+      .countdown-unit-container {
+        .countdown-label {
+          font-size: 1.5rem;
+        }
+
+        .countdown-qty {
+          font-size: 2rem;
+          font-weight: bold;
+          color: $darkText;
+        }
+      }
+    }
+  }
+
+  .cta-container {
+    max-width: 800px;
+    margin: 1.6rem auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    border: none;
+    border-radius: .5rem;
+    box-shadow: 0 0 1rem $boxShadow;
+    padding: 1rem;
+    background-color: $bckgrnd-light;
+    gap: 1rem;
+
+    
+    form {
+      max-width: 100%;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+
+      fieldset {
+        width: 100%;
+        border: none;
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        max-width: 800px;
+
+        label, input {
+          font-size: 1.4rem;
+          font-family: $bodyText;
+        }
+
+        input {
+          padding: .5rem;
+          flex: 1 0;
+          border-radius: .25rem;
+        }
+
+        input#message-input {
+          width: 30ch;
+          height: calc(1.4rem * 5);
+
+        }
+      }
+      
+      button {
+        width: 90%;
+        cursor: pointer;
+        margin-top: 1rem;
+      }
+    }
+    
+    .decline-btn {
+      width: 100%;
+      margin-top: 1rem;
+      background: none;
+      border-radius: none;
+      box-shadow: none;
+      font-size: 1rem;
+      cursor: pointer;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+// Footer
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  background-color: $darkText;
+  color: $bckgrnd-yellow;
+}

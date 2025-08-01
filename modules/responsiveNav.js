@@ -1,11 +1,14 @@
-export default function(navEl, mobileNavEl, mobileNavIcon, mobile) {
-  
+// Copyright © 2025 by Michael Lamondy | All Rights Reserved
+
+export default function (navEl, mobileNavEl, mobileNavIcon) {
+  const webPageWidth = document.getElementsByTagName("html")[0].clientWidth
+
   // #nav vs. #mobile-nav-btn visibility
-  if (!mobile) {
+  if (webPageWidth >= 1080) {
     !mobileNavIcon.classList.contains("hidden") && mobileNavIcon.classList.add("hidden");
     navEl.classList.contains("hidden") && navEl.classList.remove("hidden");
 
-  } else if (mobile) {
+  } else if (webPageWidth < 1080) {
     mobileNavIcon.classList.contains("hidden") && mobileNavIcon.classList.remove("hidden");
     !navEl.classList.contains("hidden") && navEl.classList.add("hidden");
 
@@ -23,5 +26,3 @@ export default function(navEl, mobileNavEl, mobileNavIcon, mobile) {
     })
   } 
 }
-
-// Copyright (c) 2025 by Michael Lamondy

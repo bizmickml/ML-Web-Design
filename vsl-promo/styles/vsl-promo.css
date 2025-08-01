@@ -1,39 +1,3 @@
-@font-face {
-  font-family: 'Coming Soon';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/comingsoon/v19/qWcuB6mzpYL7AJ2VfdQR1t-VWDnRsDkg.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-@font-face {
-  font-family: 'Nerko One';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/nerkoone/v16/m8JQjfZSc7OXlB3ZMOjDd5RARGmK3Q.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-@font-face {
-  font-family: 'Nunito';
-  font-style: italic;
-  font-weight: 200 1000;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/nunito/v31/XRXX3I6Li01BKofIMNaDRs7nczIH.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-@font-face {
-  font-family: 'Nunito';
-  font-style: normal;
-  font-weight: 200 1000;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/nunito/v31/XRXV3I6Li01BKofINeaBTMnFcQ.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
 :root {
   --bckgrnd-light: #fff3d4;
   --bckgrnd-light-trans: rgba(243, 244, 248, 0.643);
@@ -54,7 +18,7 @@
   --headline: "Nerko One", cursive, sans-serif;
   --subheading: "Coming Soon", cursive, sans-serif;
   --bodyText: "Nunito", sans-serif; 
-  --bkgrndIconDelayX: 3333ms;
+  --bkgrndIconDelayX: 2373ms;
 }
 
 *,
@@ -69,6 +33,7 @@ html {
   width: 100vw;
   scroll-behavior: smooth;
   overflow-x: hidden;
+    /* sets responsive font size from 10px at screen size of 320px wide to 18px at screen size of 1400px */
   font-size: clamp(10px, 7px + .75vw, 18px);
 }
 
@@ -79,7 +44,7 @@ body {
   min-width: 320px;
 }
 
-body .page-background {
+.page-background {
   width: 100vw;
   height: 100vh;
   position: fixed;
@@ -88,7 +53,7 @@ body .page-background {
   overflow-y: auto;
 }
 
-body .page-background .container {
+.page-background .container {
   width: clamp(50px, 40px + 2.8vw, 150px);
   height: clamp(50px, 40px + 2.8vw, 150px);
   position: fixed;

@@ -1,0 +1,22 @@
+@use "../sass_partials/variables" as *;
+
+*, ::before, ::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-margin-top: $headHeight;
+  font-family: $paragraph;
+    // responsive font-size from 10px at 320px wide to 18px at 1400px wide
+  font-size: clamp(10px, 7px + .75vw, 18px);
+}
+
+body { 
+  display: block;
+  position: static;
+  width: 100vw;
+  overflow-x: hidden;
+}

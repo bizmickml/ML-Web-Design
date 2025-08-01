@@ -103,3 +103,145 @@
     transform: rotateY(0deg);
   }
 }
+
+@keyframes float-up-left {
+  0% {
+    transform-origin: bottom;
+    translate: 0vw 0vh;
+  } 
+  5% {
+    translate: 2vw -8vh;
+  }
+  10% {
+    translate: 6vw -22vh;
+  }
+  15% {
+    translate: 2vw -28vh;
+  }
+  20% {
+    translate: 6vw -45vh;
+  }
+  25% {
+    translate: -2vw -53vh;
+  }
+  30% {
+    translate: 5vw -65vh;
+  }
+  35% {
+    translate: 0vw -69vh;
+  }
+  40% {
+    translate: 7vw -78vh;
+  }
+  45% {
+    translate: 0vw -93vh;
+  }
+  50% {
+    translate: 3vw -100vh;
+  }
+  50.1% {
+    transform-origin: top;
+    translate: 0vw 100vh;
+  }
+  55% {
+    translate: 6vw 88vh;
+  }
+  60% {
+    translate: 0vw 75vh;
+  }
+  65% {
+    translate: 4vw 70vh;
+  }
+  70% {
+    translate: -2vw 56vh;
+  }
+  75% {
+    translate: 5vw 48vh;
+  }
+  80% {
+    translate: 0vw 40vh;
+  }
+  85% {
+    translate: 8vw 25vh;
+  }
+  90% {
+    translate: 0vw 20vh;
+  }
+  95% {
+    translate: 2vw 8vh;
+  }
+  100% {
+    translate: 0vw 0vh;
+  }
+}
+
+@keyframes float-up-right {
+  0% {
+    transform-origin: bottom;
+    translate: 0vw 0vh;
+  } 
+  5% {
+    translate: -2vw -8vh;
+  }
+  10% {
+    translate: -6vw -22vh;
+  }
+  15% {
+    translate: -2vw -28vh;
+  }
+  20% {
+    translate: -6vw -45vh;
+  }
+  25% {
+    translate: 2vw -53vh;
+  }
+  30% {
+    translate: -5vw -65vh;
+  }
+  35% {
+    translate: 0vw -69vh;
+  }
+  40% {
+    translate: -7vw -78vh;
+  }
+  45% {
+    translate: 0vw -93vh;
+  }
+  50% {
+    translate: -3vw -100vh;
+  }
+  50.1% {
+    transform-origin: top;
+    translate: 0vw 100vh;
+  }
+  55% {
+    translate: -6vw 88vh;
+  }
+  60% {
+    translate: 0vw 75vh;
+  }
+  65% {
+    translate: -4vw 70vh;
+  }
+  70% {
+    translate: 2vw 56vh;
+  }
+  75% {
+    translate: -5vw 48vh;
+  }
+  80% {
+    translate: 0vw 40vh;
+  }
+  85% {
+    translate: -8vw 25vh;
+  }
+  90% {
+    translate: 0vw 20vh;
+  }
+  95% {
+    translate: -2vw 8vh;
+  }
+  100% {
+    translate: 0vw 0vh;
+  }
+}

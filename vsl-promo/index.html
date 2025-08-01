@@ -4,9 +4,11 @@
   <meta charset="UTF-8">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="./vsl-promo.css">
+  <link rel="preload" href="./styles/fonts.css" as="style">
+  <link rel="preconnect" href="./styles/vsl-promo-styles.css">
   <link rel="preconnect" href="./vsl-promo.js">
-  <link rel="stylesheet" href="./vsl-promo.css">
+  <link rel="stylesheet" href="./styles/fonts.css">
+  <link rel="stylesheet" href="./styles/vsl-promo-styles.css">
   <link rel="icon" href="../Images/logo/logo-square-50x50.webp">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Websites That Produce Results</title>
@@ -49,7 +51,7 @@
 <body>
   <div class="page-background">
       <!-- className "ic" = icon container -->
-    <div class="container ic1">
+    <div class="icon-container ic1">
       <img 
         srcset="../Images/backgrounds/icons/html_bkgrnd-icon-50x50.webp 50w, 
           ../Images/backgrounds/icons/html_bkgrnd-icon-100x100.webp 100w,
@@ -64,7 +66,7 @@
         src="../Images/backgrounds/icons/html_bkgrnd-icon-200x200.webp" 
       />
     </div>
-    <div class="container ic2">
+    <div class="icon-container ic2">
       <img 
         srcset="../Images/backgrounds/icons/html_bkgrnd-icon-50x50.webp 50w, 
           ../Images/backgrounds/icons/html_bkgrnd-icon-100x100.webp 100w,
@@ -79,7 +81,7 @@
         src="../Images/backgrounds/icons/html_bkgrnd-icon-200x200.webp"
       />
     </div>
-    <div class="container ic3">
+    <div class="icon-container ic3">
       <img 
         srcset="../Images/backgrounds/icons/css_bkgrnd-icon-50x50.webp 50w, 
           ../Images/backgrounds/icons/css_bkgrnd-icon-100x100.webp 100w,
@@ -94,7 +96,7 @@
         src="../Images/backgrounds/icons/css_bkgrnd-icon-200x200.webp"
       />
     </div>
-    <div class="container ic4">
+    <div class="icon-container ic4">
       <img 
         srcset="../Images/backgrounds/icons/css_bkgrnd-icon-50x50.webp 50w, 
           ../Images/backgrounds/icons/css_bkgrnd-icon-100x100.webp 100w,
@@ -109,7 +111,7 @@
         src="../Images/backgrounds/icons/css_bkgrnd-icon-200x200.webp"
       />
     </div>
-    <div class="container ic5">
+    <div class="icon-container ic5">
       <img 
         srcset="../Images/backgrounds/icons/js_bkgrnd-icon-50x50.webp 50w, 
           ../Images/backgrounds/icons/js_bkgrnd-icon-100x100.webp 100w,
@@ -124,7 +126,7 @@
         src="../Images/backgrounds/icons/js_bkgrnd-icon-200x200.webp"
       />
     </div>
-    <div class="container ic6">
+    <div class="icon-container ic6">
       <img 
         srcset="../Images/backgrounds/icons/js_bkgrnd-icon-50x50.webp 50w, 
           ../Images/backgrounds/icons/js_bkgrnd-icon-100x100.webp 100w,
@@ -139,7 +141,7 @@
         src="../Images/backgrounds/icons/js_bkgrnd-icon-200x200.webp"
       />
     </div>
-    <div class="container ic7">
+    <div class="icon-container ic7">
       <img 
         srcset="../Images/backgrounds/icons/marketing_bkgrnd-icon-50x50.webp 50w, 
           ../Images/backgrounds/icons/marketing_bkgrnd-icon-100x100.webp 100w,
@@ -154,7 +156,7 @@
         src="../Images/backgrounds/icons/marketing_bkgrnd-icon-200x200.webp"
       />
     </div>
-    <div class="container ic8">
+    <div class="icon-container ic8">
       <img 
         srcset="../Images/backgrounds/icons/marketing_bkgrnd-icon-50x50.webp 50w, 
           ../Images/backgrounds/icons/marketing_bkgrnd-icon-100x100.webp 100w,
@@ -169,7 +171,7 @@
         src="../Images/backgrounds/icons/marketing_bkgrnd-icon-200x200.webp"
       />
     </div>
-    <div class="container ic9">
+    <div class="icon-container ic9">
       <img 
         srcset="../Images/backgrounds/icons/seo_bkgrnd-icon-50x50.webp 50w, 
           ../Images/backgrounds/icons/seo_bkgrnd-icon-100x100.webp 100w,
@@ -184,7 +186,7 @@
         src="../Images/backgrounds/icons/seo_bkgrnd-icon-200x200.webp"
       />
     </div>
-    <div class="container ic10">
+    <div class="icon-container ic10">
       <img 
         srcset="../Images/backgrounds/icons/seo_bkgrnd-icon-50x50.webp 50w, 
           ../Images/backgrounds/icons/seo_bkgrnd-icon-100x100.webp 100w,
@@ -199,7 +201,7 @@
         src="../Images/backgrounds/icons/seo_bkgrnd-icon-200x200.webp"
       />
     </div>
-    <div class="container ic11">
+    <div class="icon-container ic11">
       <img 
         srcset="../Images/backgrounds/icons/www_bkgrnd-icon-50x50.webp 50w, 
           ../Images/backgrounds/icons/www_bkgrnd-icon-100x100.webp 100w,
@@ -214,7 +216,7 @@
         src="../Images/backgrounds/icons/www_bkgrnd-icon-200x200.webp"
       />
     </div>
-    <div class="container ic12">
+    <div class="icon-container ic12">
       <img 
         srcset="../Images/backgrounds/icons/www_bkgrnd-icon-50x50.webp 50w, 
           ../Images/backgrounds/icons/www_bkgrnd-icon-100x100.webp 100w,
@@ -233,97 +235,97 @@
   </div>
   <header>
     <div class="content-container">
-
-        <!-- logo Image -->
-      <img 
-        sizes="(max-width: 1280px) 250px, 
-          (min-width: 1281px) 375px"
-        srcset="../Images/logo/logo-landscape-125x50.webp 125w, 
-          ../Images/logo/logo-landscape-250x100-2x.webp 250w,
-          ../Images/logo/logo-landscape-375x150-3x.webp 375w,
-          ../Images/logo/logo-landscape-500x200-4x.webp 500w,
-          ../Images/logo/logo-landscape-625x250-5x.webp 625w"
-        alt="logo" 
-        fetchpriority="high"
-        src="../Images/logo/logo-landscape-250x100-2x.webp"
-      />
-        <!-- countdown timer -->
-      <div class="timer-wrapper hidden">
-        <div class="title">Limited Time Offer!</div>
-        <div class="countdown-container">
-          <div class="countdown-unit-container">
-            <div class="countdown-label">Days</div>
-            <div class="countdown-qty"></div>
-          </div>
-          <div class="countdown-unit-container">
-            <div class="countdown-label">Hours</div>
-            <div class="countdown-qty"></div>
-          </div>
-          <div class="countdown-unit-container">
-            <div class="countdown-label">Minutes</div>
-            <div class="countdown-qty"></div>
-          </div>
-          <div class="countdown-unit-container">
-            <div class="countdown-label">Seconds</div>
-            <div class="countdown-qty"></div>
-          </div>
-        </div>
-      </div>
+      <h1>Websites That Produce <em>Real</em> Results</h1>
     </div>
   </header>
   
     <!-- VSL Section -->
   <section id="vsl-section">
-    <div class="flex-container">
-      <div class="text-vid-wrapper">
-        <div class="text-container">
-          <div class="accent-box"></div>
-          <h1>Websites That Produce <em>Real</em> Results</h1>
-          <h2>Get a website that consistently turns your story into loyal customers!</h2>
-          <div class="instructions">Make sure your volume is up - Play the video to learn how to get maximum success online.</div>
-        </div>
-        <div class="video-container">
-          <div id="youTubePlayer"></div>
-            <!-- cover img for video -->
-          <img
-            sizes="(max-width: 360px) 320px,
-              (width > 360px) and (max-width: 520px) 480px, 
-              (width > 520px) and (max-width: 680px) 640px,
-              (width > 680px) 960px"
-            srcset="../Images/vsl_cover_photo/vsl_cover-320x180.webp 320w,
-              ../Images/vsl_cover_photo/vsl_cover-480x270.webp 480w,
-              ../Images/vsl_cover_photo/vsl_cover-640x360.webp 640w,
-              ../Images/vsl_cover_photo/vsl_cover-960x540.webp 960w,
-              ../Images/vsl_cover_photo/vsl_cover-1280x720.webp 1280w,
-              ../Images/vsl_cover_photo/vsl_cover-1920x1080.webp 1920w,
-              ../Images/vsl_cover_photo/vsl_cover-2560x1440.webp 2560w, 
-              ../Images/vsl_cover_photo/vsl_cover-3840x2400.webp 3840w"
-            alt="video cover"
-            fetchpriority="high"
-            src="../Images/vsl_cover_photo/vsl_cover-1280x720.webp"
-          />
-          <div class="overlay">
-            <button id="play-button" class="play-btn" type="button">▶</button>
-          </div>
+    <div class="text-vid-wrapper">
+      <div class="text-container">
+        <div class="accent-box"></div>
+        <h2>Get a website that consistently turns your story into <span>loyal customers!</span></h2>
+        <div class="instructions">Play the video and learn how to get a website that guarantees your maximum success online!<br><span>(make sure your volume is up)</span></div>
+      </div>
+      <div class="video-container">
+        <div id="youTubePlayer"></div>
+          <!-- cover img for video -->
+        <img
+          sizes="(max-width: 360px) 320px,
+            (width > 360px) and (max-width: 520px) 480px, 
+            (width > 520px) and (max-width: 680px) 640px,
+            (width > 680px) 960px"
+          srcset="../Images/vsl_cover_photo/vsl_cover-320x180.webp 320w,
+            ../Images/vsl_cover_photo/vsl_cover-480x270.webp 480w,
+            ../Images/vsl_cover_photo/vsl_cover-640x360.webp 640w,
+            ../Images/vsl_cover_photo/vsl_cover-960x540.webp 960w,
+            ../Images/vsl_cover_photo/vsl_cover-1280x720.webp 1280w,
+            ../Images/vsl_cover_photo/vsl_cover-1920x1080.webp 1920w,
+            ../Images/vsl_cover_photo/vsl_cover-2560x1440.webp 2560w, 
+            ../Images/vsl_cover_photo/vsl_cover-3840x2400.webp 3840w"
+          alt="video cover"
+          fetchpriority="high"
+          src="../Images/vsl_cover_photo/vsl_cover-1280x720.webp"
+        />
+        <div class="overlay">
+          <button id="play-button" class="play-btn" type="button">
+            <img class="icon" src="../Images/icons/play_arrow_50dp_FFFFFF_FILL1_wght400_GRAD0_opsz48.webp" alt="play symbol">
+          </button>
         </div>
       </div>
-      <div class="cta-container">
-        <form action="https://formsubmit.co/37ea28794195f021f14f89981b61347c" method="POST" name="VSL_lead_form">
-          <input type="hidden" name="_next" value="https://www.website-roi.com/vsl-promo/thank-you-page">
-          <input type="hidden" name="_subject" value="New web form submission!">
-          <input type="hidden" name="_captcha" value="false">
-          <fieldset>
-            <label for="name-input">Name:</label>
-            <input id="name-input" name="Name" type="text" placeholder="Theodore Roosevelt" required autocomplete="name">
-          </fieldset>
-          <fieldset>
-            <label for="email-input">Email:</label>
-            <input id="email-input" name="Email" type="email" placeholder="your_name@email.com" required autocomplete="email">
-          </fieldset>
-          <button class="cta-btn" type="submit" onclick="gtag_report_conversion()">Claim Offer Now</button>
-        </form>
-        <button id="decline-button" class="decline-btn" type="button" onclick="window.location.href='https:\/\/www.website-roi.com'">No thanks Mike, I don't want to claim this amazing offer</button>
+    </div>
+    <a href="#cta-section"><button type="button">Claim Special Offer<p>Get 50% off!</p></button></a>
+  </section>
+  <section id="cta-section">
+    <div class="text-wrapper">
+      <h2>Get 50% off!</h2>
+      <p>When you submit this form.</p>
+    </div>
+      <!-- countdown timer -->
+    <div class="timer-wrapper hidden">
+      <div class="title">Hurry! Special offer ends soon.</div>
+      <div class="countdown-container">
+        <div class="countdown-unit-container">
+          <div class="countdown-label">Days</div>
+          <div class="countdown-qty"></div>
+        </div>
+        <div class="countdown-unit-container">
+          <div class="countdown-label">Hours</div>
+          <div class="countdown-qty"></div>
+        </div>
+        <div class="countdown-unit-container">
+          <div class="countdown-label">Minutes</div>
+          <div class="countdown-qty"></div>
+        </div>
+        <div class="countdown-unit-container">
+          <div class="countdown-label">Seconds</div>
+          <div class="countdown-qty"></div>
+        </div>
       </div>
+    </div>
+
+    <div class="cta-container">
+
+      <form action="https://formsubmit.co/37ea28794195f021f14f89981b61347c" method="POST" name="VSL_lead_form">
+        <input type="hidden" name="_next" value="https://www.website-roi.com/vsl-promo/thank-you-page">
+        <input type="hidden" name="_subject" value="New web form submission!">
+        <input type="hidden" name="_captcha" value="false">
+        <h2>Sign up for a FREE, no obligation stratey session</h2>
+        <fieldset>
+          <label for="name-input">Name:</label>
+          <input id="name-input" name="Name" type="text" placeholder="Theodore Roosevelt" required autocomplete="name">
+        </fieldset>
+        <fieldset>
+          <label for="email-input">Email:</label>
+          <input id="email-input" name="Email" type="email" placeholder="your_name@email.com" required autocomplete="email">
+        </fieldset>
+        <fieldset>
+          <label for="message-input">Message:</label>
+          <input id="message-input" type="text" name="Message" value="Yes Mike, I'm interested in getting 50% off my entire first year. Please contact me to schedule my FREE strategy session.">
+        </fieldset>
+        <button class="cta-btn" type="submit" onclick="gtag_report_conversion()">Submit</button>
+      </form>
+      <button id="decline-button" class="decline-btn" type="button" onclick="window.location.href='https:\/\/www.website-roi.com'">No thanks Mike, I don't want to claim this amazing offer</button>
     </div>
   </section> 
   <footer>Copyright 2025 © Michael Lamondy | All Rights Reserved</footer> 
