@@ -31,6 +31,8 @@ body {
     //sets min design width for small older cell phones
   min-width: 320px;
   scroll-margin-top: $headHeight;
+  color: $darkText;
+  font-family: $bodyText;
 
   .page-background {
     $bkgrndIconDelayX: 2373ms;
@@ -224,9 +226,35 @@ body {
   }
 }
 
+// Header
+header {
+  width: 100vw;
+  height: $headHeight;
+
+  .content-container {
+    max-width: 1400px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 1rem 2rem;
+    gap: 20px;
+
+    img {
+      height: calc($headHeight - 2rem);
+      width: auto;
+      animation: rotate-slow 6000ms linear infinite;
+      transform-origin: center;
+    }
+  }
+}
+
 // Buttons
 button:not(.play-btn) {
-  padding: .5rem 3rem;
+  padding: .8rem 3rem;
   font-size: 1.6rem;
   font-family: $subheading;
   font-weight: bold;
@@ -241,6 +269,7 @@ button:not(.play-btn) {
   p {
     font-size: 1.2rem;
     font-family: $bodyText;
+    font-weight: normal;
   }
 
   &:hover {
@@ -249,38 +278,29 @@ button:not(.play-btn) {
   } 
 }
 
-// Header 
-header {
+// VSL section
+section#vsl-section {
   width: 100vw;
-  min-height: $headHeight;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 2rem;
 
   .content-container {
     max-width: 1400px;
-    height: 100%;
     margin: 0 auto;
-    padding: 1rem 2rem;
+    padding: 0 1rem;
 
     h1 {
       font-family: $headline;
-      font-size: 5.2rem;
+      font-size: 5.5rem;
       line-height: .75;
       color: $darkText;
       text-align: center;
     }
   }
-  
-}
-
-// VSL section
-section#vsl-section {
-  width: 100vw;
-  min-height: calc(100vh - $headHeight);
-  padding: 0 1rem 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  gap: 1rem;
 
   .text-vid-wrapper {
     max-width: 1400px;
@@ -289,6 +309,7 @@ section#vsl-section {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
+    padding: 0 1rem;
 
     .text-container {
       position: relative;
@@ -320,16 +341,16 @@ section#vsl-section {
         margin: 1rem;
 
         span {
-          font-size: 2.1rem;
+          font-size: 2.4rem;
         }
       }
 
       .instructions {
         margin: 2rem 1rem 0;
-        font-size: 1.4rem;
+        font-size: 1.8rem;
 
         span {
-          font-size: 1.2rem;
+          font-size: 1rem;
         }
       }
 
@@ -347,6 +368,7 @@ section#vsl-section {
       border-radius: .5rem;
       overflow: hidden;
       box-shadow: 0 0 .5rem $boxShadowDark;
+      transition: 500ms;
 
       img:not(.icon) {
         position: absolute;
@@ -364,13 +386,14 @@ section#vsl-section {
       .overlay {
         position: absolute;
         display: block;
-        background-color: $overlay;
+        background: $overlay;
         width: 100%;
         height: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
         transition-duration: 500ms;
+        transition-timing-function: ease-in-out;
         z-index: 1;
 
         &:hover {
@@ -408,18 +431,23 @@ section#vsl-section {
       }
     }
   }
+
+  a {
+    transition-duration: 1000ms;
+  }
 }
+
 // CTA section
 section#cta-section {
   width: 100vw;
-  min-height: 100vh;
+  min-height: calc(100vh - 2rem);
   padding: 2rem;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  gap: 2rem;
+  gap: 3rem;
 
   .text-wrapper {
     h2 {
@@ -432,7 +460,6 @@ section#cta-section {
   }
 
   .timer-wrapper {
-
     .title {
       text-align: center;
       font-size: 1.6rem;     
@@ -477,7 +504,7 @@ section#cta-section {
     border: none;
     border-radius: .5rem;
     box-shadow: 0 0 1rem $boxShadow;
-    padding: 1rem;
+    padding: 2rem 1rem;
     background-color: $bckgrnd-light;
     gap: 1rem;
 
@@ -498,22 +525,30 @@ section#cta-section {
         gap: 1rem;
         align-items: center;
         max-width: 800px;
+        height: auto;
 
         label, input {
           font-size: 1.4rem;
           font-family: $bodyText;
         }
 
-        input {
+        input, textarea {
           padding: .5rem;
           flex: 1 0;
           border-radius: .25rem;
+          border: .1rem solid $darkText;
+          font-family: $bodyText;
+
+          &:focus {
+            box-shadow: 0 0 .5rem $boxShadow;
+            transform: scale(1.03);
+          }
         }
 
-        input#message-input {
-          width: 30ch;
-          height: calc(1.4rem * 5);
-
+        textarea {
+          field-sizing: content;
+          resize: vertical;
+          font-size: 1.4rem;
         }
       }
       
@@ -523,20 +558,182 @@ section#cta-section {
         margin-top: 1rem;
       }
     }
-    
-    .decline-btn {
-      width: 100%;
-      margin-top: 1rem;
-      background: none;
-      border-radius: none;
-      box-shadow: none;
-      font-size: 1rem;
-      cursor: pointer;
+  }
+}
 
-      &:hover {
-        text-decoration: underline;
+// Thank You section
+section#thank-you-section {
+  padding: 3rem 1rem;
+  font-size: 1.6rem;
+
+  .flex-container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+
+    .title {
+      font-size: 4rem;
+    }
+    
+    .offer {
+      margin-top: -4rem;
+    }
+
+    .container.thank-you{
+      padding: 1.5rem;
+      border: none;
+      border-radius: .5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      border: .1rem solid $darkText;
+      
+    }
+    
+    
+    h2 {
+      margin-bottom: 1rem;
+      font-size: 2.2rem;
+  
+      span {
+        font-size: 1.6rem
+      }
+    
+    }
+    
+    h3 {
+      margin-bottom: .75rem;
+      font-size: 1.6rem
+    }
+    
+    
+    a {
+      text-decoration: none;
+      color: unset;
+    }
+  }
+
+  
+  
+  
+  
+}
+
+// Next Steps section
+section#next-steps {
+  width: 100vw;
+  background-color: $bckgrnd-blue-bright;
+  padding: 3rem;
+  font-size: 1.6rem;
+  color: white;
+
+  .container.next-steps {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+
+    h2 {
+      margin-bottom: 1rem;
+    }
+
+    .email {
+      font-weight: bold;
+      font-size: 1.6rem;
+      word-break: keep-all;
+      word-wrap: none;
+      text-align: center;
+      align-self: center;
+
+      a {
+        text-decoration: none;
+        color: white;
+        cursor: pointer;
       }
     }
+
+  }
+}
+
+// Fast Track section
+section#fast-track {
+  width: 100vw;
+  font-size: 1.6rem;
+
+  .container.fast-track {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap:.25rem;
+
+    h2 {
+      align-self: center;
+  
+      span {
+        font-size: 1.4rem;
+        vertical-align: middle;
+      }
+    
+    }
+    
+    span.subtitle {
+      margin-bottom: .75rem;
+      font-size: 1.6rem;
+      align-self: center;
+    }
+
+    .link-container {
+      display: flex;
+      align-items: stretch;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      gap: 3rem;
+      margin-top: 2rem;
+
+      div:not(.text-container) {
+        min-width: 300px;
+        min-height: 200px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: 1rem;
+        box-shadow: 0 0 .2rem $boxShadow;
+        padding: 1rem;
+        margin-top: 1rem;
+        border: none;
+        border-radius: .5rem;
+        background-color: $bckgrnd-light;
+
+        .text-container {
+          box-shadow: none; 
+          text-align: center;
+
+          h4 {
+            font-size: 1.8rem;
+          }
+
+          span.note {
+            font-size: 1.2rem;
+            margin-top: -2rem;
+          }
+  
+        }
+
+        
+      }
+      
+    }
+
   }
 }
 
@@ -545,7 +742,8 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 5px;
+  padding: .5rem .1rem;
   background-color: $darkText;
   color: $bckgrnd-yellow;
+  font-size: 1.2rem;
 }

@@ -14,6 +14,8 @@ let secondsLeft = 0;
 var youTubePlayer;
 const playBtn = document.getElementById("play-button");
 let storageAvailable;
+const vslSection = document.getElementById("vsl-section");
+const ctaBtn = vslSection.querySelectorAll("a")[0]
 
 const getStorageAvailable = (storageType) => { 
   try {
@@ -80,6 +82,14 @@ const displayTimer = () => {
 
 };
 
+const showCTAButton = () => { 
+  ctaBtn.classList.contains("invisible") && ctaBtn.classList.remove("invisible");
+}
+
+vslSection.addEventListener("click", () => { 
+  playBtn.click();
+})
+
   //play youtube video on clicking placeholder
 playBtn.addEventListener("click", () => { 
 
@@ -106,12 +116,19 @@ playBtn.addEventListener("click", () => {
       },
       events: {
         'onReady': onPlayerReady,
+        'onStateChange': onStateChange,
       }
     })
   }
   
   const onPlayerReady = (e) => { 
     e.target.playVideo()
+  }
+
+  const onStateChange = (event) => { 
+    if (event.data === YT.PlayerState.ENDED) { 
+      showCTAButton()
+    }
   }
 
 })
@@ -133,4 +150,3 @@ window.onload = () => {
     displayTimer()
   }
 }
-

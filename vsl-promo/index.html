@@ -58,9 +58,9 @@
           ../Images/backgrounds/icons/html_bkgrnd-icon-150x150.webp 150w,
           ../Images/backgrounds/icons/html_bkgrnd-icon-200x200.webp 200w" 
         sizes="(max-width: 768px) 50px, 
-          (min-width: 769px) and (max-width: 1900px) 100px, 
-          (min-width: 1901px) and (max-width: 2560px) 150px,
-          (min-width: 2561px) 200px" 
+          (width > 768px) and (max-width: 1900px) 100px, 
+          (width > 1900px) and (max-width: 2560px) 150px,
+          (width > 2560px) 200px" 
         alt="" 
         loading="lazy"
         src="../Images/backgrounds/icons/html_bkgrnd-icon-200x200.webp" 
@@ -232,20 +232,17 @@
       />
     </div>
     <div class="overlay"></div>
-  </div>
-  <header>
+  </div>  
+    <!-- VSL Section -->
+  <section id="vsl-section">
     <div class="content-container">
       <h1>Websites That Produce <em>Real</em> Results</h1>
     </div>
-  </header>
-  
-    <!-- VSL Section -->
-  <section id="vsl-section">
     <div class="text-vid-wrapper">
       <div class="text-container">
         <div class="accent-box"></div>
         <h2>Get a website that consistently turns your story into <span>loyal customers!</span></h2>
-        <div class="instructions">Play the video and learn how to get a website that guarantees your maximum success online!<br><span>(make sure your volume is up)</span></div>
+        <div class="instructions">Play the video to learn more<br><span>(make sure your volume is up)</span></div>
       </div>
       <div class="video-container">
         <div id="youTubePlayer"></div>
@@ -274,12 +271,12 @@
         </div>
       </div>
     </div>
-    <a href="#cta-section"><button type="button">Claim Special Offer<p>Get 50% off!</p></button></a>
+    <a class="invisible" href="#cta-section"><button type="button">Claim Special Offer<p>Get 50% off!</p></button></a>
   </section>
   <section id="cta-section">
     <div class="text-wrapper">
       <h2>Get 50% off!</h2>
-      <p>When you submit this form.</p>
+      <p>When you sign up today.</p>
     </div>
       <!-- countdown timer -->
     <div class="timer-wrapper hidden">
@@ -310,7 +307,7 @@
         <input type="hidden" name="_next" value="https://www.website-roi.com/vsl-promo/thank-you-page">
         <input type="hidden" name="_subject" value="New web form submission!">
         <input type="hidden" name="_captcha" value="false">
-        <h2>Sign up for a FREE, no obligation stratey session</h2>
+        <h2>Sign up for a FREE, no obligation strategy session</h2>
         <fieldset>
           <label for="name-input">Name:</label>
           <input id="name-input" name="Name" type="text" placeholder="Theodore Roosevelt" required autocomplete="name">
@@ -321,11 +318,11 @@
         </fieldset>
         <fieldset>
           <label for="message-input">Message:</label>
-          <input id="message-input" type="text" name="Message" value="Yes Mike, I'm interested in getting 50% off my entire first year. Please contact me to schedule my FREE strategy session.">
+          <textarea id="message-input" wrap="hard" name="Message" autocomplete="off">Yes Mike, I'm interested in getting 50% off my entire first year. Please contact me to schedule my FREE strategy session.</textarea>
         </fieldset>
         <button class="cta-btn" type="submit" onclick="gtag_report_conversion()">Submit</button>
       </form>
-      <button id="decline-button" class="decline-btn" type="button" onclick="window.location.href='https:\/\/www.website-roi.com'">No thanks Mike, I don't want to claim this amazing offer</button>
+      <!-- <button id="decline-button" class="decline-btn" type="button" onclick="window.location.href='https:\/\/www.website-roi.com'">No thanks Mike, I don't want to claim this amazing offer</button> -->
     </div>
   </section> 
   <footer>Copyright 2025 © Michael Lamondy | All Rights Reserved</footer> 

@@ -1,12 +1,14 @@
+<!-- Copyright © 2025 Michael Lamondy | All Rights Reserved -->
 <!DOCTYPE html>
-<!-- Copyright © -->
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="../vsl-promo.css" as="stylesheet">
-  <link rel="stylesheet" href="../vsl-promo.css">
+  <link rel="preload" href="../styles/fonts.css" as="style">
+  <link rel="preconnect" href="../styles/vsl-promo-styles.css" as="stylesheet">
+  <link rel="stylesheet" href="../styles/fonts.css">
+  <link rel="stylesheet" href="../styles/vsl-promo-styles.css">
   <link rel="icon" href="../../Images/logo/logo-square-50x50.webp">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Thank You</title>
@@ -75,34 +77,49 @@
     <div class="flex-container">
       <h1 class="title">Offer claimed!</h1>
       <span class="offer">- 50% off your entire first year -</span>
-      <div class="container">
+      <div class="container thank-you">
         <h2>Thank You.</h2>
-        <h3>The form has been submitted</h3>
+        <h3>The form was successfully submitted</h3>
         <span>Mike, will reach out to you shortly</span>
       </div>
-      <div class="container">
-        <h2>Next Steps:</h2>
-        <span>You will recieve a reply message from <a class="email" href="mailto:m_lamondy@website-roi.com">M_LAMONDY@website-roi.com</a></span>
-        <span>That email will include further instructions.</span>
-        <span>To ensure my emails don't get sent to your junk or spam folders, be sure to add: <span class="email">M_LAMONDY@website-roi.com</span></span>
-      </div>
-      <div class="container fast-track">
-        <h2>Fast-Track<span> (optional)</span></h2>
-        <h3>Choose one of the options below to fast-track your success!</h3>
-        <div class="link-container">
-          <div>
-            <span>Navigate to Mike's scheduling page using this link:</span>
-            <a href="https://app.simplymeet.me/m-lamondy/1753908871" onclick="gtag_report_conversion()">Self-Service Scheduling Page</a>
+    </div>
+  </section>
+
+    <!-- Next Steps Section -->
+  <section id="next-steps">
+    <div class="container next-steps">
+      <h2>Next Steps:</h2>
+      <span>You will recieve a reply message from:</span>
+      <span class="email"><a href="mailto:m_lamondy@website-roi.com?subject=New%20Connection&body=Hey%20Mike%2C%20I%20just%20signed%20up%20for%20a%20FREE%20consultation%21">M_LAMONDY@website-roi.com</a></span>
+      <span>That email will include further instructions.</span>
+      <span>Use the email link above to send me a quick message so my future emails don't get lost in your spam folder.</span>
+    </div>
+  </section>
+
+    <!-- Fast Track Section -->
+  <section id="fast-track">
+    <div class="container fast-track">
+      <h2>Fast-Track<span> (optional)</span></h2>
+      <span class="subtitle">Choose one of the options below to fast-track your success!</span>
+      <div class="link-container">
+        <div>
+          <div class="text-container">
+            <h4>Get the first available appointment!</h4>
+            <span>Use this link to schedule your strategy session right now.</span>
           </div>
-          <div>
-            <span>Call now to get in touch directly</span>
+          <button type="button" onclick="gtag_report_conversion(); window.location.replace('https:\/\/app.simplymeet.me/m-lamondy/1753908871')">Schedule Now<p>Link to self-service scheduling page</p></button>
+        </div>
+        <div>
+          <div class="text-container">
+            <h4>Call now to get in touch directly</h4>
             <span class="note">(available Mon-Fri 8am-4:30pm EST)</span>
-            <a href="tel:5085587844" onclick="gtag_report_conversion()">(508) 558-7844</a>
           </div>
+          <button type="button" onclick="gtag_report_conversion(); window.location.replace('tel:5085587844')">(508) 558-7844<p>We'll schedule your session together</p></button>
         </div>
       </div>
     </div>
   </section>
+
   <footer>Copyright 2025 © Michael Lamondy | All Rights Reserved</footer>   
 </body>
 </html>
