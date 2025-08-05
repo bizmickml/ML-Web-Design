@@ -1,0 +1,15 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  width: 100vw;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+    /* sets responsive font size from 10px at screen size of 320px wide to 18px at screen size of 1400px */
+  font-size: clamp(10px, 7px + .75vw, 18px);
+}

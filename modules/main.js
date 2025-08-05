@@ -1,12 +1,6 @@
-import preferredFontSize from "./responsiveFontSize.js";
-import navControl from "./responsiveNav.js";
+// Copyright (c) 2025 by Michael Lamondy | All Rights Reserved
 
-/** ---- For Module Parameters ---- */
-const minFontSize = 10;
-const maxFontSize = 25;
-const maxScreenWidth = 1800;
-const minScreenWidth = 320;
-const mobileScreenWidthThreshold = 1000;
+import navControl from "./responsiveNav.js";
 
 /** ---- Page Elements ---- */
 const navEl = document.getElementById("nav");
@@ -19,15 +13,13 @@ const aboutHeadTitle = document.getElementById("about-title");
 const keyPoints = [document.getElementById("key-point-1"), document.getElementById("key-point-2"), document.getElementById("key-point-3")];
 
 function isMobile() {
-  if (window.innerWidth < mobileScreenWidthThreshold) {
+  if (screen.orientation.type.includes("portrait") && screen.width < 720) {
     return true 
+  } else if (screen.orientation.type.includes("landscape") && screen.width < 1080) {
+    return true
   } else {
     return false
   }
-}
-
-function setFontSize() {
-  document.querySelector(":root").setAttribute("style", `font-size: ${preferredFontSize(minFontSize, maxFontSize, minScreenWidth, maxScreenWidth)};`)
 }
 
 function whyUsLayout() {
@@ -88,20 +80,17 @@ function animateKeyPoints() {
 }
 
 window.onload = () => {
-  setFontSize();
   aboutHeadLayout();
-  navControl(navEl, mobileNavEl, mobileNavIcon, isMobile())
+  navControl(navEl, mobileNavEl, mobileNavIcon)
   whyUsLayout();
 }
 
 window.addEventListener("resize", () => {
   aboutHeadLayout();
-  navControl(navEl, mobileNavEl, mobileNavIcon, isMobile())
+  navControl(navEl, mobileNavEl, mobileNavIcon)
   whyUsLayout();
 });
 
 window.addEventListener("scroll", () => {
   animateKeyPoints();
 })
-
-// Copyright (c) 2025 by Michael Lamondy

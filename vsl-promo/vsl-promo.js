@@ -6,12 +6,28 @@ const msMinute = 1000 * 60
 const msSecond = 1000
 const timeLimitDays = 14
 const timeLimitMS = timeLimitDays * msDay;
+let timeStamp;
 let daysLeft = 0;
 let hoursLeft = 0;
 let minutesLeft = 0;
 let secondsLeft = 0;
 var youTubePlayer;
 const playBtn = document.getElementById("play-button");
+let storageAvailable;
+const vslSection = document.getElementById("vsl-section");
+const ctaBtn = vslSection.querySelectorAll("a")[0]
+
+const getStorageAvailable = (storageType) => { 
+  try {
+    var storage = window[storageType],
+      x = '__storage_test__';
+    storage.setItem(x, x);
+    storage.removeItem(x);
+    return true;
+  } catch (e) {
+    return false;
+  }
+}
 
 const getTimeStamp = () => {
   const date = new Date();
@@ -19,12 +35,19 @@ const getTimeStamp = () => {
 };
 
 const getTimeLeft = () => { 
-  let time = timeLimitMS - (localStorage.getItem("visited") ? getTimeStamp() - parseInt(JSON.parse(localStorage.getItem("visited"))) : 0);
+  let time;
+
+  if (storageAvailable === true) {
+    time = timeLimitMS - (localStorage.getItem("visited") ? getTimeStamp() - parseInt(JSON.parse(localStorage.getItem("visited"))) : 0);
+
+  } else if (storageAvailable === false) {
+    time = (timeLimitMS / 2) - (getTimeStamp() - timeStamp);
+    
+  }
   return time
 }
 
-const convertTimeLeft = () => { 
-  let time = getTimeLeft()
+const convertTimeLeft = (time) => {
 
   daysLeft = time >= msDay ? Math.floor(time / msDay) : 0;
   time -= daysLeft > 0 ? (daysLeft * msDay) : 0;
@@ -47,6 +70,25 @@ const displayTimeLeft = (days, hours, minutes, seconds) => {
   minuteCont.children[1].textContent = minutes
   secondCont.children[1].textContent = seconds
 }
+
+const displayTimer = () => { 
+
+  setInterval(() => {
+    convertTimeLeft(getTimeLeft())
+    displayTimeLeft(daysLeft, hoursLeft, minutesLeft, secondsLeft)
+  }, 1000);
+
+  timerWrapper.classList.contains("hidden") && timerWrapper.classList.remove("hidden");
+
+};
+
+const showCTAButton = () => { 
+  ctaBtn.classList.contains("invisible") && ctaBtn.classList.remove("invisible");
+}
+
+vslSection.addEventListener("click", () => { 
+  playBtn.click();
+})
 
   //play youtube video on clicking placeholder
 playBtn.addEventListener("click", () => { 
@@ -74,6 +116,7 @@ playBtn.addEventListener("click", () => {
       },
       events: {
         'onReady': onPlayerReady,
+        'onStateChange': onStateChange,
       }
     })
   }
@@ -82,26 +125,28 @@ playBtn.addEventListener("click", () => {
     e.target.playVideo()
   }
 
+  const onStateChange = (event) => { 
+    if (event.data === YT.PlayerState.ENDED) { 
+      showCTAButton()
+    }
+  }
+
 })
 
 window.onload = () => { 
-  if (!localStorage.getItem("visited")) {
-    localStorage.setItem("visited", JSON.stringify(getTimeStamp()));
+  storageAvailable = getStorageAvailable("localStorage");
+  
+  if (storageAvailable === true) {
+    if (!localStorage.getItem("visited")) {
+      localStorage.setItem("visited", JSON.stringify(getTimeStamp()));
+    } else if (localStorage.getItem("visited") && (getTimeLeft() > 0)) {
+      displayTimer();
+    } else if (localStorage.getItem("visited") && (getTimeLeft() < 0)) {
+      window.location.replace("https://www.website-roi.com");
+    }
 
-    setInterval(() => {
-      convertTimeLeft()
-      displayTimeLeft(daysLeft, hoursLeft, minutesLeft, secondsLeft)
-    }, 1000);
-    timerWrapper.classList.contains("hidden") && timerWrapper.classList.remove("hidden");
-
-  } else if (localStorage.getItem("visited") && (getTimeLeft() > 0)) {
-    setInterval(() => {
-      convertTimeLeft()
-      displayTimeLeft(daysLeft, hoursLeft, minutesLeft, secondsLeft)
-    }, 1000);
-    timerWrapper.classList.contains("hidden") && timerWrapper.classList.remove("hidden");
-
-  } else {
-    window.location.href="https:\/\/www.website-roi.com";  }
+  } else if (storageAvailable === false) { 
+    timeStamp = getTimeStamp();
+    displayTimer()
+  }
 }
-
