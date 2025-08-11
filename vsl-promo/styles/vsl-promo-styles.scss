@@ -33,6 +33,58 @@ body {
   scroll-margin-top: $headHeight;
   color: $darkText;
   font-family: $bodyText;
+  
+  .loading-overlay:not(.hidden) {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,.75);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    z-index: 10;
+
+    span {
+      display: block;
+      margin: 0 .25rem;
+      animation: loading 1500ms ease-in-out infinite;
+
+      &:nth-of-type(2) {
+        animation-delay: calc(750ms / 7);
+      }
+    
+      &:nth-of-type(3) {
+        animation-delay: calc(calc(750ms / 7) * 2);
+      }
+    
+      &:nth-of-type(4) {
+        animation-delay: calc(calc(750ms / 7) * 3);
+      }
+    
+      &:nth-of-type(5) {
+        animation-delay: calc(calc(750ms / 7) * 4);
+      }
+    
+      &:nth-of-type(6) {
+        animation-delay: calc(calc(750ms / 7) * 5);
+      }
+    
+      &:nth-of-type(7) {
+        animation-delay: calc(calc(750ms / 7) * 6);
+      }
+    
+    }
+  
+  
+  }
 
   .page-background {
     $bkgrndIconDelayX: 2373ms;
@@ -623,8 +675,59 @@ section#thank-you-section {
   
 }
 
+section#scheduling {
+  display: block;
+  position: static;
+  width: 100vw;
+  background-color: $bckgrnd-blue-bright;
+  padding: 3rem;
+  font-size: 1.6rem;
+  color: white;
+
+  .container.scheduling {
+    position: static;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+
+    iframe {
+      width: 100%;
+      min-height: 1200px;
+      border: none;
+      box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+      border-radius: .5rem;
+    }
+
+    h2 {
+      margin-bottom: 1rem;
+    }
+
+    .email {
+      font-weight: bold;
+      font-size: 1.6rem;
+      word-break: keep-all;
+      word-wrap: none;
+      text-align: center;
+      align-self: center;
+
+      a {
+        text-decoration: none;
+        color: white;
+        cursor: pointer;
+      }
+    }
+
+  }
+}
+
+
 // Next Steps section
 section#next-steps {
+  display: block;
+  position: static;
   width: 100vw;
   background-color: $bckgrnd-blue-bright;
   padding: 3rem;
@@ -746,4 +849,13 @@ footer {
   background-color: $darkText;
   color: $bckgrnd-yellow;
   font-size: 1.2rem;
+}
+
+@keyframes loading {
+  33% {
+    translate: 0 -50px;
+  }
+  66% {
+    translate: 0 50px;
+  }
 }

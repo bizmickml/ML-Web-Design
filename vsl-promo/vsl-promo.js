@@ -1,3 +1,6 @@
+import post from ".././modules/formHandler.js";
+const leadForm = document.querySelector('#vsl-lead-form');
+
 const timerWrapper = document.getElementsByClassName("timer-wrapper")[0];
 const countdownCont = document.getElementsByClassName("countdown-container")[0];
 const msDay = 1000 * 60 * 60 * 24
@@ -84,7 +87,28 @@ const displayTimer = () => {
 
 const showCTAButton = () => { 
   ctaBtn.classList.contains("invisible") && ctaBtn.classList.remove("invisible");
+  ctaBtn.href = "#cta-section";
 }
+
+leadForm.addEventListener("submit", (e) => { 
+  e.preventDefault();
+  document.querySelector("#time-input").value = (new Date());
+  document.querySelector('#device-width-input').value = screen.width;
+  document.querySelector('#device-height-input').value = screen.height;
+  document.querySelector('#window-width-input').value = window.innerWidth;
+  document.querySelector('#window-height-input').value = window.innerHeight;
+  document.querySelector('#platform-input').value = navigator.userAgentData.platform;
+  document.querySelector('#isMobile-input').value = navigator.userAgentData.mobile;
+  const formData = new FormData(e.target);
+  const dataObj = {}
+  for (const [key, value] of formData) {
+    dataObj[key] = (value);
+  }
+  dataObj['form_name'] = leadForm.id.replaceAll('-', "_");
+
+  post(dataObj);
+
+})
 
 vslSection.addEventListener("click", () => { 
   playBtn.click();
@@ -139,14 +163,13 @@ window.onload = () => {
   if (storageAvailable === true) {
     if (!localStorage.getItem("visited")) {
       localStorage.setItem("visited", JSON.stringify(getTimeStamp()));
-    } else if (localStorage.getItem("visited") && (getTimeLeft() > 0)) {
-      displayTimer();
     } else if (localStorage.getItem("visited") && (getTimeLeft() < 0)) {
-      window.location.replace("https://www.website-roi.com");
+      localStorage.setItem("visited", JSON.stringify(getTimeStamp()));
     }
 
   } else if (storageAvailable === false) { 
     timeStamp = getTimeStamp();
-    displayTimer()
   }
+
+  displayTimer()
 }

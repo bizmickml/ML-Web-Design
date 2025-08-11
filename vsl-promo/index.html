@@ -49,6 +49,9 @@
 </head>
 
 <body>
+  <div class="loading-overlay hidden">
+    <span>L</span><span>o</span><span>a</span><span>d</span><span>i</span><span>n</span><span>g</span>
+  </div>
   <div class="page-background">
       <!-- className "ic" = icon container -->
     <div class="icon-container ic1">
@@ -271,7 +274,7 @@
         </div>
       </div>
     </div>
-    <a class="invisible" href="#cta-section"><button type="button">Claim Special Offer<p>Get 50% off!</p></button></a>
+    <a class="invisible"><button type="button">Claim Special Offer<p>Get 50% off!</p></button></a>
   </section>
   <section id="cta-section">
     <div class="text-wrapper">
@@ -303,29 +306,33 @@
 
     <div class="cta-container">
 
-      <form action="https://formsubmit.co/37ea28794195f021f14f89981b61347c" method="POST" name="VSL_lead_form">
-        <input type="hidden" name="_next" value="https://www.website-roi.com/vsl-promo/thank-you-page">
-        <input type="hidden" name="_subject" value="New web form submission!">
-        <input type="hidden" name="_captcha" value="false">
+      <form id="vsl-lead-form">
         <h2>Sign up for a FREE, no obligation strategy session</h2>
         <fieldset>
           <label for="name-input">Name:</label>
-          <input id="name-input" name="Name" type="text" placeholder="Theodore Roosevelt" required autocomplete="name">
+          <input id="name-input" name="name" type="text" placeholder="Theodore Roosevelt" required autocomplete="name">
         </fieldset>
         <fieldset>
           <label for="email-input">Email:</label>
-          <input id="email-input" name="Email" type="email" placeholder="your_name@email.com" required autocomplete="email">
+          <input id="email-input" name="email" type="email" placeholder="your_name@email.com" required autocomplete="email">
         </fieldset>
         <fieldset>
           <label for="message-input">Message:</label>
-          <textarea id="message-input" wrap="hard" name="Message" autocomplete="off">Yes Mike, I'm interested in getting 50% off my entire first year. Please contact me to schedule my FREE strategy session.</textarea>
+          <textarea id="message-input" wrap="hard" name="message" autocomplete="off">Yes Mike, I'm interested in getting 50% off my entire first year. Please contact me to schedule my FREE strategy session.</textarea>
         </fieldset>
+        <input id="time-input" type="hidden" name="date">
+        <input id="device-width-input" type="hidden" name="device_width">
+        <input id="device-height-input" type="hidden" name="device_height">
+        <input id="window-width-input" type="hidden" name="window_width">
+        <input id="window-height-input" type="hidden" name="window_height">
+        <input id="platform-input" type="hidden" name="platform">
+        <input id="isMobile-input" type="hidden" name="isMobile">
+  
         <button class="cta-btn" type="submit" onclick="gtag_report_conversion()">Submit</button>
       </form>
-      <!-- <button id="decline-button" class="decline-btn" type="button" onclick="window.location.href='https:\/\/www.website-roi.com'">No thanks Mike, I don't want to claim this amazing offer</button> -->
     </div>
   </section> 
   <footer>Copyright 2025 © Michael Lamondy | All Rights Reserved</footer> 
-  <script src="./vsl-promo.js"></script>
+  <script src="./vsl-promo.js" type="module"></script>
 </body>
 </html>
