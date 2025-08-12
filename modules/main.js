@@ -1,6 +1,7 @@
 // Copyright (c) 2025 by Michael Lamondy | All Rights Reserved
 
-import navControl from "./responsiveNav.js";
+import navControl from "./responsiveNav.js"; 
+import formHandler from "./formHandler.js";
 
 /** ---- Page Elements ---- */
 const navEl = document.getElementById("nav");

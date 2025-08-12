@@ -420,7 +420,7 @@ body .page-background .icon-container.ic12 img {
   position: absolute;
   right: 100%;
 }
-body .page-background .overlay {
+body .page-background .pg-background-overlay {
   position: absolute;
   height: 100vh;
   width: 100vw;
@@ -472,6 +472,13 @@ button:not(.play-btn) p {
 button:not(.play-btn):hover {
   transform: scale(1.03);
   box-shadow: 0.1rem 0.1rem 0.3rem rgba(0, 0, 0, 0.5);
+}
+
+a.invisible {
+  cursor: default;
+}
+a.invisible button {
+  cursor: default;
 }
 
 section#vsl-section {
@@ -568,7 +575,7 @@ section#vsl-section .text-vid-wrapper .video-container img:not(.icon) {
   height: auto;
   z-index: -1;
 }
-section#vsl-section .text-vid-wrapper .video-container .overlay {
+section#vsl-section .text-vid-wrapper .video-container .yt-video-placeholder-overlay {
   position: absolute;
   display: block;
   background: rgba(0, 0, 0, 0.35);
@@ -581,10 +588,10 @@ section#vsl-section .text-vid-wrapper .video-container .overlay {
   transition-timing-function: ease-in-out;
   z-index: 1;
 }
-section#vsl-section .text-vid-wrapper .video-container .overlay:hover {
+section#vsl-section .text-vid-wrapper .video-container .yt-video-placeholder-overlay:hover {
   background: radial-gradient(circle at center, white, rgba(0, 0, 0, 0.65) 45%);
 }
-section#vsl-section .text-vid-wrapper .video-container .overlay .play-btn {
+section#vsl-section .text-vid-wrapper .video-container .yt-video-placeholder-overlay .play-btn {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -601,11 +608,11 @@ section#vsl-section .text-vid-wrapper .video-container .overlay .play-btn {
   font-size: 2rem;
   transition-duration: 200ms;
 }
-section#vsl-section .text-vid-wrapper .video-container .overlay .play-btn:hover {
+section#vsl-section .text-vid-wrapper .video-container .yt-video-placeholder-overlay .play-btn:hover {
   transform: scale(1.05);
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
 }
-section#vsl-section .text-vid-wrapper .video-container .overlay .play-btn img.icon {
+section#vsl-section .text-vid-wrapper .video-container .yt-video-placeholder-overlay .play-btn img.icon {
   width: 50%;
   height: auto;
 }
@@ -679,6 +686,47 @@ section#cta-section .cta-container form {
   align-items: center;
   justify-content: center;
   gap: 1rem;
+}
+section#cta-section .cta-container form .form-loading-overlay:not(.hidden) {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+  z-index: 10;
+}
+section#cta-section .cta-container form .form-loading-overlay:not(.hidden) span {
+  display: block;
+  margin: 0 0.25rem;
+  animation: loading 1500ms ease-in-out infinite;
+}
+section#cta-section .cta-container form .form-loading-overlay:not(.hidden) span:nth-of-type(2) {
+  animation-delay: 107.1428571429ms;
+}
+section#cta-section .cta-container form .form-loading-overlay:not(.hidden) span:nth-of-type(3) {
+  animation-delay: 214.2857142857ms;
+}
+section#cta-section .cta-container form .form-loading-overlay:not(.hidden) span:nth-of-type(4) {
+  animation-delay: 321.4285714286ms;
+}
+section#cta-section .cta-container form .form-loading-overlay:not(.hidden) span:nth-of-type(5) {
+  animation-delay: 428.5714285714ms;
+}
+section#cta-section .cta-container form .form-loading-overlay:not(.hidden) span:nth-of-type(6) {
+  animation-delay: 535.7142857143ms;
+}
+section#cta-section .cta-container form .form-loading-overlay:not(.hidden) span:nth-of-type(7) {
+  animation-delay: 642.8571428571ms;
 }
 section#cta-section .cta-container form fieldset {
   width: 100%;
@@ -759,7 +807,34 @@ section#thank-you-section .flex-container a {
   color: unset;
 }
 
+section#scheduling {
+  display: block;
+  position: static;
+  width: 100vw;
+  background-color: #2c47ce;
+  padding: 3rem 1rem;
+  font-size: 1.6rem;
+  color: white;
+}
+section#scheduling .container.scheduling {
+  position: static;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+section#scheduling .container.scheduling iframe {
+  width: 100%;
+  min-height: 1100px;
+  border: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  border-radius: 0.5rem;
+}
+
 section#next-steps {
+  display: block;
+  position: static;
   width: 100vw;
   background-color: #2c47ce;
   padding: 3rem;
@@ -859,6 +934,15 @@ footer {
   background-color: #181301;
   color: #fecc04;
   font-size: 1.2rem;
+}
+
+@keyframes loading {
+  33% {
+    translate: 0 -50px;
+  }
+  66% {
+    translate: 0 50px;
+  }
 }
 
 /*# sourceMappingURL=vsl-promo-styles.css.map */

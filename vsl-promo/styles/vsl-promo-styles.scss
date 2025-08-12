@@ -33,7 +33,7 @@ body {
   scroll-margin-top: $headHeight;
   color: $darkText;
   font-family: $bodyText;
-
+  
   .page-background {
     $bkgrndIconDelayX: 2373ms;
 
@@ -215,7 +215,7 @@ body {
       }
     }
 
-    .overlay {
+    .pg-background-overlay {
       position: absolute;
       height: 100vh;
       width: 100vw;
@@ -276,6 +276,14 @@ button:not(.play-btn) {
     transform: scale(1.03);
     box-shadow: .1rem .1rem .3rem $boxShadowDark;
   } 
+}
+
+a.invisible {
+  cursor: default;
+
+  button {
+    cursor: default;
+  }
 }
 
 // VSL section
@@ -383,7 +391,7 @@ section#vsl-section {
         z-index: -1;
       }
 
-      .overlay {
+      .yt-video-placeholder-overlay {
         position: absolute;
         display: block;
         background: $overlay;
@@ -518,6 +526,58 @@ section#cta-section {
       justify-content: center;
       gap: 1rem;
 
+      .form-loading-overlay:not(.hidden) {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0,0,0,.75);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 3rem;
+        font-weight: bold;
+        z-index: 10;
+    
+        span {
+          display: block;
+          margin: 0 .25rem;
+          animation: loading 1500ms ease-in-out infinite;
+    
+          &:nth-of-type(2) {
+            animation-delay: calc(750ms / 7);
+          }
+        
+          &:nth-of-type(3) {
+            animation-delay: calc(calc(750ms / 7) * 2);
+          }
+        
+          &:nth-of-type(4) {
+            animation-delay: calc(calc(750ms / 7) * 3);
+          }
+        
+          &:nth-of-type(5) {
+            animation-delay: calc(calc(750ms / 7) * 4);
+          }
+        
+          &:nth-of-type(6) {
+            animation-delay: calc(calc(750ms / 7) * 5);
+          }
+        
+          &:nth-of-type(7) {
+            animation-delay: calc(calc(750ms / 7) * 6);
+          }
+        
+        }
+      
+      
+      }
+    
       fieldset {
         width: 100%;
         border: none;
@@ -623,8 +683,38 @@ section#thank-you-section {
   
 }
 
+section#scheduling {
+  display: block;
+  position: static;
+  width: 100vw;
+  background-color: $bckgrnd-blue-bright;
+  padding: 3rem 1rem;
+  font-size: 1.6rem;
+  color: white;
+
+  .container.scheduling {
+    position: static;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    iframe {
+      width: 100%;
+      min-height: 1100px;
+      border: none;
+      box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+      border-radius: .5rem;
+    }
+  }
+}
+
+
 // Next Steps section
 section#next-steps {
+  display: block;
+  position: static;
   width: 100vw;
   background-color: $bckgrnd-blue-bright;
   padding: 3rem;
@@ -746,4 +836,13 @@ footer {
   background-color: $darkText;
   color: $bckgrnd-yellow;
   font-size: 1.2rem;
+}
+
+@keyframes loading {
+  33% {
+    translate: 0 -50px;
+  }
+  66% {
+    translate: 0 50px;
+  }
 }

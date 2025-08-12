@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href=".././styles/fonts.css" as="style">
+    <link rel="preconnect" href=".././styles/vsl-promo-styles.css">
+    <link rel="stylesheet" href=".././styles/fonts.css">
+    <link rel="stylesheet" href=".././styles/vsl-promo-styles.css">
+    <link rel="icon" href="../../Images/logo/logo-square-50x50.webp">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scheduling Page</title>
+    <meta name="description"
+      content="Website design - I build fully custom websites that consistently convert your story into loyal customers!">
+      <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17332276422"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'AW-17332276422');
+    </script>
+      <!--  Event snippet for Contact conversion page --
+            In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+    <script>
+      function gtag_report_conversion(url) {
+        var callback = function () {
+          if (typeof(url) != 'undefined') {
+            window.location = url;
+          }
+        };
+        gtag('event', 'conversion', {
+            'send_to': 'AW-17332276422/6CuOCIuy0e4aEMaZ1shA',
+            'event_callback': callback
+        });
+        return false;
+      }
+    </script>
+    <script type="text/javascript">
+      (function(c,l,a,r,i,t,y){
+          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      })(window, document, "clarity", "script", "sd94btekav");
+    </script>
+  </head>
+
+  <body>
+  <div class="page-background">
+    <div class="pg-background-overlay"></div>
+  </div>
+  <header>
+    <div class="content-container">
+
+        <!-- logo Image -->
+      <img 
+        sizes="(max-width: 1280px) 250px, 
+          (min-width: 1281px) 375px"
+        srcset="../../Images/logo/logo-landscape-125x50.webp 125w, 
+          ../../Images/logo/logo-landscape-250x100-2x.webp 250w,
+          ../../Images/logo/logo-landscape-375x150-3x.webp 375w,        
+          ../../Images/logo/logo-landscape-500x200-4x.webp 500w,
+          ../../Images/logo/logo-landscape-625x250-5x.webp 625w"
+        alt="" 
+        fetchpriority="high"
+        src="../../Images/logo/logo-landscape-250x100-2x.webp"
+      />
+    </div>
+  </header>
+  
+    <!-- Thank You Section -->
+  <section id="thank-you-section">
+    <div class="flex-container">
+      <div class="container thank-you">
+        <h2>Thank You.</h2>
+        <h3>The form was successfully submitted</h3>
+        <span>Use the scheduler on this page to claim your special offer now</span>
+      </div>
+    </div>
+  </section>
+
+    <!-- Scheduling Section -->
+  <section id="scheduling">
+    <div class="container scheduling">
+      <iframe src="https://app.simplymeet.me/m-lamondy/strategy-session?is_widget=1&view=compact&specific-meeting-type=1" scrolling="yes"></iframe>
+    </div>
+  </section>
+
+  </body>
+</html>
