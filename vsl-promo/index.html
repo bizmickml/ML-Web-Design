@@ -49,9 +49,6 @@
 </head>
 
 <body>
-  <div class="loading-overlay hidden">
-    <span>L</span><span>o</span><span>a</span><span>d</span><span>i</span><span>n</span><span>g</span>
-  </div>
   <div class="page-background">
       <!-- className "ic" = icon container -->
     <div class="icon-container ic1">
@@ -234,7 +231,7 @@
         src="../Images/backgrounds/icons/www_bkgrnd-icon-200x200.webp"
       />
     </div>
-    <div class="overlay"></div>
+    <div class="pg-background-overlay"></div>
   </div>  
     <!-- VSL Section -->
   <section id="vsl-section">
@@ -249,8 +246,8 @@
       </div>
       <div class="video-container">
         <div id="youTubePlayer"></div>
-          <!-- cover img for video -->
         <img
+          class="video-cover-image"
           sizes="(max-width: 360px) 320px,
             (width > 360px) and (max-width: 520px) 480px, 
             (width > 520px) and (max-width: 680px) 640px,
@@ -267,7 +264,7 @@
           fetchpriority="high"
           src="../Images/vsl_cover_photo/vsl_cover-1280x720.webp"
         />
-        <div class="overlay">
+        <div class="yt-video-placeholder-overlay">
           <button id="play-button" class="play-btn" type="button">
             <img class="icon" src="../Images/icons/play_arrow_50dp_FFFFFF_FILL1_wght400_GRAD0_opsz48.webp" alt="play symbol">
           </button>
@@ -281,56 +278,8 @@
       <h2>Get 50% off!</h2>
       <p>When you sign up today.</p>
     </div>
-      <!-- countdown timer -->
-    <div class="timer-wrapper hidden">
-      <div class="title">Hurry! Special offer ends soon.</div>
-      <div class="countdown-container">
-        <div class="countdown-unit-container">
-          <div class="countdown-label">Days</div>
-          <div class="countdown-qty"></div>
-        </div>
-        <div class="countdown-unit-container">
-          <div class="countdown-label">Hours</div>
-          <div class="countdown-qty"></div>
-        </div>
-        <div class="countdown-unit-container">
-          <div class="countdown-label">Minutes</div>
-          <div class="countdown-qty"></div>
-        </div>
-        <div class="countdown-unit-container">
-          <div class="countdown-label">Seconds</div>
-          <div class="countdown-qty"></div>
-        </div>
-      </div>
-    </div>
-
-    <div class="cta-container">
-
-      <form id="vsl-lead-form">
-        <h2>Sign up for a FREE, no obligation strategy session</h2>
-        <fieldset>
-          <label for="name-input">Name:</label>
-          <input id="name-input" name="name" type="text" placeholder="Theodore Roosevelt" required autocomplete="name">
-        </fieldset>
-        <fieldset>
-          <label for="email-input">Email:</label>
-          <input id="email-input" name="email" type="email" placeholder="your_name@email.com" required autocomplete="email">
-        </fieldset>
-        <fieldset>
-          <label for="message-input">Message:</label>
-          <textarea id="message-input" wrap="hard" name="message" autocomplete="off">Yes Mike, I'm interested in getting 50% off my entire first year. Please contact me to schedule my FREE strategy session.</textarea>
-        </fieldset>
-        <input id="time-input" type="hidden" name="date">
-        <input id="device-width-input" type="hidden" name="device_width">
-        <input id="device-height-input" type="hidden" name="device_height">
-        <input id="window-width-input" type="hidden" name="window_width">
-        <input id="window-height-input" type="hidden" name="window_height">
-        <input id="platform-input" type="hidden" name="platform">
-        <input id="isMobile-input" type="hidden" name="isMobile">
-  
-        <button class="cta-btn" type="submit" onclick="gtag_report_conversion()">Submit</button>
-      </form>
-    </div>
+    <div class="timer-wrapper hidden"></div>
+    <div class="cta-container"></div>
   </section> 
   <footer>Copyright 2025 © Michael Lamondy | All Rights Reserved</footer> 
   <script src="./vsl-promo.js" type="module"></script>
